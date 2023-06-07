@@ -1,0 +1,58 @@
+% Oficina de LaTeX (19.05.2008)
+% Autor: Leandro Gutierrez Rizzi
+% Exemplo 08
+
+\documentclass[10pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{a4wide}
+\usepackage{amsmath}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\renewcommand{\tablename}{Tabela}
+
+\begin{table}[h]
+\caption{Dados críticos}
+\centering
+\vspace{0.2cm}
+\begin{tabular}{l c c}
+\hline
+ & $T_{c}$($^{o}$C) & $P_{c}$ (atm)\\
+\hline
+Ne & $-228.7$ & $26.9$\\
+Ar & $1122.3$ & $48$\\
+Kr & $-63.8$ & $54.3$\\
+Xe & $16.6$ & $58$\\
+$\text{N}_{2}$ & $-147$ & $33.5$\\
+$\text{O}_{2}$ & $-118.4$ & $50.1$\\
+$\text{CO}$ & $-140$ & $34.5$\\
+$\text{CH}_{4}$ & $-82.1$ & $45.8$\\
+\hline
+\end{tabular}
+\label{dadoscriticos}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+{\bf Horário} & \bf seg  & \bf ter & \bf qua & \bf  qui & \bf sex \\
+\hline
+8:00-10:00   & x &   &  &   &   \\ \hline
+10:00-12:00  &   &   &  &   & x \\ \hline
+13:00-14:00  &   &   &  &   &   \\ \hline
+14:00-16:00  &   & x &  & x &   \\ \hline
+16:00-18:00  &   &   &  &   &   \\ \hline
+19:00-20:00  &   &   &  &   &   \\ \hline
+20:00-21:00  &   &   &  &   &   \\ \hline
+21:00-22:00  &   &   &  &   &   \\ \hline
+\end{tabular}
+\caption{Dias e horários do curso de italiano.}
+\label{diasehorarios}
+\end{table}
+
+\end{document}

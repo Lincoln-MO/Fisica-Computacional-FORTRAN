@@ -1,0 +1,96 @@
+\chapter{Propriedades gerais da função de partição}
+\noindent
+
+\section{O método de Darwin-Fowler}
+\noindent
+
+Embora o ensemble canônico possa ser derivado do ensemble microcanônico, como nós mostramos na seção \ref{ensemble_canonico}, ele também pode ser derivado diretamente. De fato, se nós não estivermos preocupados com rigor, a derivação é bastante simples. Considere um ensemble de $M$ sistemas tais que a média da energia feita sobre todos os sistemas e um dado número $U$. Nós queremos encontrar a distribuição de probabilidade mais provável de energia nesses $M$ sistemas no limite que $M \rightarrow \infty$. Por definição de um ensemble, os sistemas não interagem uns com os outros; eles podem ser connsiderados um a cada tempo, e eles são consequentemente distiguíveis uns dos outros. Então nosso problema é matematicamente idêntico ao problema da distribuição mais provável para um gás ideal clássico de partículas. A respostas como nós conhecemos é a distribuição de Maxwell-Boltzmann, i.e., o valor de energia $E_{n}$ ocorre sobre os sistemas com probabilidade relativa $e^{-\beta E_{n}}$, onde $\beta$ é determinado pela energia média $U$. Esse ensemble é o ensemble canônico. É óbvio que essa derivação é igualmente boa na mecânica estatística clássica e quântica.
+
+Nós queremos apresentar aqui um derivação mais rigorosa que evita o uso da aproximação de Stirling, a qual é necessária na derivação usual da distribuição de Maxwell-Boltzmann. O propósito dessa apresentação é não só derivar o ensemble canônico diretamente mas também introduzir o método de integração no ponto de sela, o qual é uma ferramenta matemática útil na mecânica estatística. As considerações que se seguem asseguram boa igualdade para mecânica estatística clássica e quântica.
+
+O método que nós descreveremos é devido a Darwin e Fowler. Assumindo que o sistema num ensemble pode ter qualquer um dos valores de energia $E_{k}(k=0,1,2,...)$. Escolhendo a unidade de energia sendo suficientemente pequena, nós podemos considerar $E_{k}$ como um inteiro. Dentro do sistema no ensembles faremos 
+\begin{eqnarray}
+m_{0} &~~~& \text{sistemas que têm energia }E_{0} \nonumber \\
+m_{1} &~~~& \text{sistemas que têm energia }E_{1} \nonumber \\
+\vdots \label{conjunto_da_distribuicao} \\
+m_{k} &~~~& \text{sistemas que têm energia }E_{k} \nonumber \\
+\vdots \nonumber
+\end{eqnarray}
+O conjunto de inteiror $(m_{k})$ descrevem uma distribuição de energia arbitrária entre os sistemas. Esta deve satisfazer as condições
+\begin{eqnarray}
+\sum_{k=0}^{\infty}m_{k}&=&M \nonumber \\
+\sum_{k=0}^{\infty}E_{k}m_{k}&=& MU
+\label{condicoes_para_mk}
+\end{eqnarray}
+onde tanto $M$ quanto $U$ são inteiros. Nosso propósito é encontrar o conjunto $\{\bar{m}_{k}\}$ mais provável.
+
+Dado um conjunto arbitrário $\{m_{k}\}$ satisfazendo (\ref{condicoes_para_mk}) geralmente mais de um caminho para construir um ensemble correpondendo a (\ref{conjunto_da_distribuicao}), pois a troca de dois sistemas (os quais são indistinguíveis) não muda $\{m_{k}\}$. Seja $W\{m_{k}\}$ o número de maneiras distintas nas quais nós podemos designar valores de energia a sistemas para satisfazer (\ref{conjunto_da_distribuicao}). Obviamente
+\begin{equation}
+W\{m_{k}\}=\frac{M!}{m_{0}!m_{1}!m_{2}!\dots}
+\label{contagem_de_W(m_k)}
+\end{equation}
+
+Para o caso presente o postulado de igual probabilidade a priori que todas as distribuições na energia entre os sistemas são igualmente prováveis, sujeita as condições (\ref{condicoes_para_mk}). Então $\{\bar{m}_{k}\}$ é o conjunto que maximiza (\ref{contagem_de_W(m_k)}). Antecipando o fato que no limite $< \rightarrow \infty$ quase todos os possíveis conjuntos $\{m_{k}\}$ são idênticos com $\{\bar{m}_{k}\}$, nós podemo também encontrar $\{\bar{m}_{k}\}$ calculando o valor da média de $m_{k}$ sobre todas as possíveis distribuições na energia:
+\begin{equation}
+\langle m_{k}\rangle \equiv \frac{\sum_{\{m_{i}\}}^{\prime} m_{k}W\{m_{i}\}}{\sum_{\{m_{i}\}}^{\prime} W\{m_{i}\}}
+\end{equation}
+onde o símbolo $^{\prime}$ indica que a soma é sobre todos os conjuntos $\{m_{k}\}$ sujeitos a (\ref{condicoes_para_mk}). Nós precisamos calcular também o flutuação média quadrática $\langle m_{k}^{2}\rangle-\langle m_{k}\rangle^{2}$. Se isso desaparece quando $M \rightarrow \infty$, então nesse limite $\langle m_{k}\rangle \rightarrow \bar{m}_{k}$.
+
+Por conveniência nós modificamos a definição $W\{m_{k}\}$ para
+\begin{equation}
+W\{m_{k}\}=\frac{M!g_{0}^{m_{0}}g_{1}^{m_{1}}\dots}{m_{0}!m_{1}\dots}
+\end{equation}
+onde $g_{k}$ é um número o qual no fim do cálculo será setado igual a unidade. Sendo
+\begin{equation}
+\Gamma(M,U)\equiv \sum_{\{m_{i}\}} {}^{'} W\{m_{i}\}
+\label{Gamma_de_MeU}
+\end{equation}
+Então
+\begin{equation}
+\langle m_{k}\rangle = g_{k} \frac{\partial}{\partial g_{k}} \log \Gamma
+\label{mk_de_gk}
+\end{equation}
+O flutuação média quadrática pode ser obtida da seguinte maneira:
+\begin{eqnarray*}
+\langle m_{k}^{2} \rangle &=&\frac{1}{\Gamma}\sum_{\{m_{i}\}} {}^{\prime} m_{k}^{2}W\{m_{i}\}=\frac{1}{\Gamma}g_{k} \frac{\partial}{\partial g_{k}} \left(g_{k} \frac{\partial \Gamma}{\partial g_{k}} \right)\\
+&=&g_{k} \frac{\partial}{\partial g_{k}} \left(\frac{1}{\Gamma} g_{k} \frac{\partial \Gamma}{\partial g_{k}} \right)-\left(\frac{\partial}{\partial g_{k}}\frac{1}{\Gamma}\right) g_{k}^{2}\frac{\partial \Gamma}{\partial g_{k}}\\
+&=&g_{k} \frac{\partial}{\partial g_{k}} \left(g_{k} \frac{\partial}{\partial g_{k}} \log \Gamma \right)+\left(g_{k} \frac{\partial}{\partial g_{k}} \log \Gamma \right)^{2}
+\end{eqnarray*}
+Assim
+\begin{equation}
+\langle m_{k}^{2}\rangle-\langle m_{k}\rangle^{2}=g_{k} \frac{\partial}{\partial g_{k}} \left(g_{k} \frac{\partial}{\partial g_{k}} \log \Gamma \right)
+\end{equation}
+Dessa forma é suficiente calcular $\log \Gamma$.
+
+Por (\ref{Gamma_de_MeU}) e (\ref{mk_de_gk})
+\begin{equation}
+\Gamma=M! \sum{m_{0},m_{1}, \dots} {}^{'} \left(\frac{g_{0}^{m_{0}}}{m_{0}!}\cdot \frac{g_{1}^{m_{1}}}{m_{1}!}\dots \right)
+\label{Gamma_de_gs_e_ms}
+\end{equation}
+Isso não pode ser explicitamente calculado devido a restrição (\ref{condicoes_para_mk}). Nós estamos, no entanto, interessados somente nessa quantidade no limite $M\rightarrow \infty$. Para prosseguir, nós definimos uma função geratriz para $\Gamma$ da seguinte maneira. Para qualquer número complexo $z$, seja
+\begin{equation}
+G(M,z)=\equiv \sum_{U=0}^{\infty}z^{MU}\Gamma(M,U)
+\end{equation}
+Usando (\ref{Gamma_de_gs_e_ms}) e (\ref{condicoes_para_mk}) nós obtemos
+\begin{equation}
+G(M,z)=\equiv \sum_{U=0}^{\infty} \sum_{m_{0},m_{1}, \dots} {}^{'} \left[\frac{(g_{0}z^{E_{0}})^{m_{0}}}{m_{0}!}\cdot \frac{(g_{1}z^{E_{1}})^{m_{1}}}{m_{1}!}\dots \right]
+\label{G_de_Mz_dupla_soma}
+\end{equation}
+É fácil ver que a soma dupla em (\ref{G_de_Mz_dupla_soma}) é equivalente a somar sobre todos os conjuntos $\{m_{k}\}$ sujeitos somente a condição $\sum m_{k}=M$. Para mostrar isso nós precisamos somente verificar que todos termo em uma soma aparece uma vez na outra e vice-versa. Então
+\begin{eqnarray}
+G(M,z)&=& \sum_{m_{0},m_{1}, \dots}^{\sum m_{k}=M} \frac{M!}{m_{0}!m_{1}!\dots} \left[ (g_{0}z^{E_{0}})^{m_{0}} (g_{1}z^{E_{1}})^{m_{1}} \dots \right]
+\nonumber \\
+&=&(g_{0}z^{E_{0}}+g_{1}z^{E_{1}}+\dots)^{M}
+\end{eqnarray}
+
+
+
+\section{Limite clássico da função de partição}
+\noindent
+
+\section{Singularidades e transições de fase}
+\noindent
+
+\section{O teorema do círculo de Lee-Yang}
+\noindent
+

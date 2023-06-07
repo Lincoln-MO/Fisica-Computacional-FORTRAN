@@ -1,0 +1,81 @@
+% Oficina de LaTeX (12.05.2008)
+% Autor: Leandro Gutierrez Rizzi
+% Exemplo 02
+
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+
+\begin{document}
+\noindent
+Este é o seu {\bf segundo} documento utilizando \LaTeX.\\
+Algumas modificações foram
+ feitas para estudarmos alguns
+pacotes. Agora está bem mais fácil!!!
+
+Mas, relembrando a letra da música "Breathe":
+
+\begin{quote}
+(...) quando finalmente o trabalho terminar\\
+Não se sente, é hora de cavar um outro.
+\end{quote}
+
+Assim, nós temos que cavar outros buracos, e muitos.
+
+\newpage
+
+\begin{center}
+Podemos centralizar o texto para mostrar os diversos tamanhos de fontes:
+
+\vspace{0.5cm}
+
+{\Huge Huge}
+
+\vspace{0.5cm}
+
+{\huge huge}
+
+\vspace{0.5cm}
+
+{\Large Large}
+
+\vspace{0.5cm}
+
+{\large large}
+
+\vspace{0.5cm}
+
+{\small small}
+
+\vspace{0.5cm}
+
+{\small tiny}
+
+\end{center}
+
+\begin{flushright}
+Ou ainda podemos alinhar o texto à direita para mostrar os tipo de fontes:
+
+\vspace{0.5cm}
+
+{\sffamily Sans Serif}
+
+\vspace{0.5cm}
+
+{\bf {\sffamily Sans Serif bold}}
+
+\vspace{0.5cm}
+
+\texttt{Letra de máquina de escrever}
+
+\vspace{0.5cm}
+
+{\it \texttt{Letra em itálico da máquina de escrever}}
+
+\end{flushright}
+
+\include{ex_02_include}
+
+\end{document}

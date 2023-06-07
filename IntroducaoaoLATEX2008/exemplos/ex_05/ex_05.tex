@@ -1,0 +1,156 @@
+% Oficina de LaTeX (19.05.2008)
+% Autor: Leandro Gutierrez Rizzi
+% Exemplo 05
+
+\documentclass[11pt,leqno]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{a4wide}
+\usepackage{amsmath}
+
+\baselineskip=14pt
+
+\begin{document}
+
+\noindent
+{\bf 1)} Dado que
+\begin{equation}
+S=-k \sum_{j} P_{j} \ln P_{j}
+\nonumber
+\end{equation}
+onde $P_{j}= \frac{e^{-\beta E_{j}}}{Z}$.
+
+Mostre que:
+\begin{equation}
+S=\frac{\bar{E}}{T}+k \ln Z
+\nonumber
+\end{equation}
+{\it Resposta:} Substituinto a definição de $P_{j}$ em $S$ teremos:
+\begin{eqnarray}
+S&=& -k \sum_{j} \frac{e^{-\beta E_{j}}}{Z} \ln \left( \frac{e^{-\beta E_{j}}}{Z} \right)
+\nonumber \\
+S&=& +k \sum_{j} \frac{e^{-\beta E_{j}}}{Z} (\beta E_{j} + \ln Z) \nonumber \\
+S&=& k \beta \frac{ \sum_{j} E_{j} e^{-\beta E_{j}}}{Z} + k \frac{\sum_{j} e^{-\beta E_{j}}}{Z}\ln Z \nonumber
+\end{eqnarray}
+Substituindo $\bar{E}=\frac{\sum_{j} E_{j} e^{-\beta E_{j}}}{Z}$, $Z=\sum_{j} e^{-\beta E_{j}}$ e $\beta=\frac{1}{kT}$ obtemos:
+\begin{equation}
+S=\frac{\bar{E}}{T}  + k \ln Z
+\nonumber
+\end{equation}
+\\
+\noindent
+{\bf 3)} Suponha que a energia de uma partícula possa ser representada por $E(z) = a z^{2}$, onde $z$ é uma coordenada ou momento ($\frac{p^{2}}{2m}$) com valores entre $-\infty$ e $+\infty$.\\
+a) Mostre que a energia média por partícula sujeita à estatística de Boltzmann é $\frac{kT}{2}$.\\
+{\it Resposta:} Sendo a energia média por partícula dada por:
+\begin{equation}
+\bar{E}=\frac{\int_{-\infty}^{\infty} E(z) f(z) dz}{\int_{-\infty}^{\infty} f(z) dz}
+\nonumber
+\end{equation}
+Utilizando a estatística de Boltzmann, podemos substituir $f(z)\propto e^{-\beta E(z)}$ para obter:
+\begin{equation}
+\bar{E}=\frac{\int_{-\infty}^{\infty} E(z) e^{-\beta E(z)} dz}{\int_{-\infty}^{\infty} e^{-\beta E(z)} dz}=\frac{\int_{-\infty}^{\infty}  a z^{2} e^{-\beta a z^{2}} dz}{\int_{-\infty}^{\infty} e^{-\beta a z^{2}} dz}
+\nonumber
+\end{equation}
+Sendo
+\begin{equation}
+\int_{-\infty}^{\infty} e^{-\beta a z^{2}} dz=\sqrt{\frac{\pi}{a \beta}}
+\nonumber
+\end{equation}
+e
+\begin{eqnarray}
+\int_{-\infty}^{\infty} a z^{2} e^{-\beta a z^{2}} dz&=&\int_{-\infty}^{\infty} \left( -\frac{d}{d\beta} \right) e^{-\beta a z^{2}} dz\nonumber \\&=&\left( -\frac{d}{d\beta} \right) \int_{-\infty}^{\infty} e^{-\beta a z^{2}} dz\nonumber \\&=&\left( -\frac{d}{d\beta} \right) \sqrt{\frac{\pi}{a \beta}}=\frac{1}{2\beta} \sqrt{\frac{\pi}{a \beta}}
+\nonumber
+\end{eqnarray}
+Temos
+\begin{equation}
+\bar{E}=\frac{ \frac{1}{2\beta} \sqrt{\frac{\pi}{a \beta}} }{ \sqrt{\frac{\pi}{a \beta}} }=\frac{1}{2\beta}
+\nonumber
+\end{equation}
+Substituindo $\beta=\frac{1}{kT}$ obtemos finalmente
+\begin{equation}
+\bar{E}=\frac{kT}{2}
+\nonumber
+\end{equation}
+
+\noindent
+b) Qual a relação entre o resultado de (a) com o teorema da equipartição de energia: para um sistema clássico de partículas em equilíbrio térmico à temperatura $T$, a energia média de cada grau de liberdade da partícula é $\frac{kT}{2}$.\\
+{\it Resposta:} O resultado obtido concorda exatamente com o enunciado pelo teorema da equipartição de energia. Vale ressaltar que tanto para $z$ representando uma coordenada qualquer quanto um momento qualquer a integral desse grau de liberdade quadrático resulta em $\frac{kT}{2}$, dessa forma, obter a energia média por partícula utilizando a estatística de Boltzmann e $E(z)=az^{2}$ é uma forma de demonstrar o resultado predito pelo teorema.\\
+
+\noindent
+{\bf 3)} Um sistema de 2 níveis de energia $E_{0}$  e $E_{1}$ é populado por $N$ partículas à temperatura $T$ seguindo a distribuição clássica de Boltzmann.\\
+a) Obtenha uma expressão para a energia média do sistema por partícula.\\
+{\it Resposta:} Utilizando o ensemble can\^onico temos a energia média por partícula definida por:
+\begin{equation}
+\bar{E}=\frac{\sum_{j=0}^{1} E_{j} e^{-\beta E_{j}}}{\sum_{j=0}^{1}e^{-\beta E_{j}}}=\frac{E_{0} e^{-\beta E_{0}} + E_{1} e^{-\beta E_{1}}}{e^{-\beta E_{0}} + e^{-\beta E_{1}}}= \frac{E_{0} + E_{1} e^{-\beta \Delta E}}{1 + e^{-\beta \Delta E}}
+\nonumber
+\end{equation}
+onde, arbitrariamente, definimos $\Delta E=E_{1}-E_{0}>0$. Dividindo pelo número total de partículas $N$ obtemos:\\
+\begin{equation}
+\bar{e}=\frac{\bar{E}}{N} = \frac{1}{N} \left(\frac{E_{0} + E_{1} e^{-\beta \Delta E}}{1 + e^{-\beta \Delta E}}\right)
+\label{e_tqualquer}
+\end{equation}
+b) Calcule (a) nos limites $T \rightarrow 0$ e $T \rightarrow \infty$.\\
+{\it Resposta:} Para $T \rightarrow 0$ temos $\beta=\frac{1}{kT} \rightarrow \infty$ e portanto $e^{-\beta \Delta E} \rightarrow 0$. Dessa forma, podemos fazer a seguinte expansão:
+\begin{equation}
+\frac{1}{1 + e^{-\beta \Delta E}} \approx 1-e^{-\beta \Delta E}
+\nonumber
+\end{equation}
+Substituindo em (\ref{e_tqualquer}) obtemos:
+\begin{equation}
+\bar{e} \approx \frac{(E_{0} + E_{1} e^{-\beta \Delta E})(1-e^{-\beta \Delta E})}{N} =
+\frac{E_{0}+\Delta E e^{-\beta \Delta E} + E_{1} (e^{-\beta \Delta E})^{2}}{N} \nonumber
+\end{equation}
+Desprezando o último termo teremos:
+\begin{equation}
+\bar{e}=\frac{\bar{E}}{N} \approx \frac{1}{N} (E_{0}+\Delta E e^{-\beta \Delta E}) 
+\label{e_tzero}
+\end{equation}
+Ou seja, para baixas temperaturas observamos uma maior contribuição devido ao estado de mais baixa energia (geralmente o estado fundamental), $E_{0}$.\\
+Para $T \rightarrow \infty$ temos $\beta=\frac{1}{kT} \rightarrow 0$ e portanto $e^{-\beta \Delta E} \rightarrow 1$. Dessa forma, podemos fazer a seguinte expansão mantendo apenas os termos de $O(\beta)$:
+\begin{equation}
+e^{-\beta \Delta E}=\sum_{k=0}^{\infty} \frac{(-\beta \Delta E)^{k}}{k!} \approx 1-\beta \Delta E
+\nonumber
+\end{equation}
+Substituindo em (\ref{e_tqualquer}) obtemos:
+\begin{eqnarray}
+\bar{e} &\approx& \frac{1}{N} \left( \frac{E_{0} + E_{1}(1-\beta \Delta E)}{1+(1-\beta \Delta E)} \right)= \frac{1}{N} \left( \frac{E_{0} + E_{1}(1-\beta \Delta E)}{1+(1-\beta \Delta E)}\right) \frac{(2+\beta \Delta E)}{(2+\beta \Delta E)} \nonumber \\
+\bar{e} &\approx& \frac{1}{N} \left( \frac{2 (E_{0} + E_{1}) - 2 E_{1} \beta \Delta E + (E_{0}+E_{1})\beta \Delta E-E_{1}(\beta \Delta E)^{2}}{4-(\beta \Delta E)^{2}} \right)\nonumber \\
+\bar{e} &\approx& \frac{1}{N} \left( \frac{2 (E_{0} + E_{1}) -\beta (\Delta E)^{2}-E_{1}(\beta \Delta E)^{2}}{4-(\beta \Delta E)^{2}} \right) \nonumber
+\end{eqnarray}
+Desprezando os termos de $O(\beta^{2})$ obtemos:
+\begin{equation}
+\bar{e} \approx \frac{1}{N} \left( \frac{1}{2}(E_{0}+E_{1})-\frac{\beta}{4}(\Delta E)^{2} \right)
+\label{e_tinfty}
+\end{equation}
+Ou seja, para altas temperaturas observamos que os dois estados contribuem igualmente para a energia média.\\
+c) Calcule $c_{v}$.\\
+{\it Resposta:} A partir de (\ref{e_tqualquer}) podemos obter o calor específico através da seguinte relação termodin\^amica:
+\begin{equation}
+c_{v}(T)= \left(\frac{\partial \bar{e}}{\partial T}\right)_{v}
+\label{relacao}
+\end{equation}
+ou seja,
+\begin{eqnarray}
+c_{v}(T)&=&\frac{1}{N} \frac{\partial }{\partial T} \left( \frac{E_{0} + E_{1} e^{-\frac{\Delta E}{kT}}}{1 + e^{-\frac{\Delta E}{kT}}} \right) \nonumber\\
+c_{v}(T)&=&\frac{1}{N} \left[ \frac{E_{1}e^{-\frac{\Delta E}{kT}}\left(-\frac{\Delta E}{k}\right)\left(-\frac{1}{T^{2}} \right) (1+ e^{-\frac{\Delta E}{kT}})
+- e^{-\frac{\Delta E}{kT}}\left(-\frac{\Delta E}{k}\right)\left(-\frac{1}{T^{2}} \right) (E_{0} + E_{1} e^{-\frac{\Delta E}{kT}})}{(1 + e^{-\frac{\Delta E}{kT})^{2}}} \right] \nonumber \\
+c_{v}(T)&=&\frac{e^{-\frac{\Delta E}{kT}}}{N} \frac{\Delta E }{k T^{2}} \left[ \frac{E_{1}(1+ e^{-\frac{\Delta E}{kT}})-(E_{0} + E_{1} e^{-\frac{\Delta E}{kT}})}{1+2e^{-\frac{\Delta E}{kT}}+ (^{e-\frac{\Delta E}{kT}})^{2}}\right]\nonumber \\
+c_{v}(T)&=& \frac{1}{2N} \frac{\Delta E }{k T^{2}} \left[ \frac{E_{1}-E_{0}}{1 + (e^{\frac{\Delta E}{kT}}+e^{-\frac{\Delta E}{kT}}  )/2}\right] \nonumber \\
+c_{v}(T)&=&\frac{1}{2N} \frac{(\Delta E)^{2} }{k T^{2}} \left[ \frac{1}{1+\cosh(\frac{\Delta E}{kT})}\right] \nonumber
+\end{eqnarray}
+d) Calcule $c_{v}$ para $T \rightarrow 0$ e $T \rightarrow \infty$.\\
+{\it Resposta:}\\
+Utilizando (\ref{e_tzero}) podemos obter o calor específico para $T \rightarrow 0$ através da relação (\ref{relacao}):
+\begin{eqnarray}
+c_{v}(T)&=&\frac{1}{N} \frac{\partial }{\partial T} (E_{0}+\Delta E e^{-\frac{\Delta E}{kT}})=\frac{\Delta E}{N} \left(-\frac{\Delta E}{k}\right)\left(-\frac{1}{T^{2}}\right) e^{-\frac{\Delta E}{kT}} \nonumber \\
+c_{v}(T)&=&\frac{1}{N} \frac{(\Delta E)^{2} }{k T^{2}}e^{-\frac{\Delta E}{kT}} \nonumber
+\end{eqnarray}
+Utilizando (\ref{e_tinfty}) podemos obter o calor específico para $T \rightarrow \infty$ através da relação (\ref{relacao}):
+\begin{eqnarray}
+c_{v}(T)&=&\frac{1}{N} \frac{\partial }{\partial T} \left( \frac{1}{2}(E_{0}+E_{1})-\frac{1}{4} \frac{(\Delta E)^{2}}{kT} \right) \nonumber \\
+c_{v}(T)&=&\frac{1}{4 N} \frac{(\Delta E)^{2} }{k T^{2}} \nonumber
+\end{eqnarray}
+Poderíamos substituir $\frac{\partial }{\partial T}$ por $-\frac{1}{kT^{2}}\frac{\partial }{\partial \beta}$ na relação (\ref{relacao}), o que resultaria nos mesmos resultados para os itens c) e d).
+
+\end{document}

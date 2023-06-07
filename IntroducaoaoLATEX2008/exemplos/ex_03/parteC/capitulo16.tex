@@ -1,0 +1,434 @@
+\chapter{Fenômenos críticos}
+\noindent
+
+\section{O parâmetro de ordem}
+\noindent
+
+O termo fenômeno crítico refere-se as propriedades termodinâmicas do sistema próximo de uma temperatura crítica $T_{c}$ de uma transição de fase de segunda ordem, ou próximo do ponto crítica de uma transição gás-líquido. O termo "segunda ordem" é usada aqui no sentido de "não ser de primeira ordem".
+
+Nós modelaremos depois do ponto de Curie num sistema ferromagnético. As duas fases e cada lado da temperatura crítica têm simetrias espaciais diferentes. Acima da temperatura crítica, onde não existe magnetização, o sistema é rotacionalmente invariante. Abaixo da temperatura crítica, onde ocorre magnetização espontânea, o vetor magnetização define uma direção preferencial no espaço, destruindo a invariância rotacional. Desde que a simetria é presente ou ausente, as duas fases precisam ser descritas por funções diferentes das variáveis termodinâmicas, as quais não podem atravessar o ponto crítico de forma analísticamente contínua.
+
+Devido a redução da simetria, um parâmetro extra é necessário para descrever a termodinâmica da fase de menor temperatura. O parâmetro extra é chamado "parâmetro de ordem", denotado por $M$, o qual é usualmente uma variável termodinâmica extensiva acessível à medição. no exemplo ferromagnético $M$ é o vetor magnetização, com três componentes. Para o ponto crítico gás-líquido, nós podemos usar como parâmetro de ordem a diferência de volume das fases coexistentes, a qual tende a zero no ponto crítico. Nesse caso $M$ é uma quantidade de componente única. Não existe uma mudançã de simetria óbvia no caso gás-líquido, mas a teoria funciona, então nós o incluimos bi esquema geral.
+
+A idéia básica é que próximo ao ponto crítico, o parâmetro de ordem é a única quantidade termodinâmica importante. Por simplicidade vamos trabalhar com uma componente única do parâmetro de ordem $M$, a qual nós pensamos como uma magnetização escalar. Quando o parâmetro de ordem muda de $dM$, o trabalho feito no sistema é escrito na forma
+\begin{equation}
+dW=HdM
+\end{equation}
+Isso define o "campo conjugado" $H$, o qual é usualmente uma variável termodinâmica intensiva. No caso ferromagnético $H$ é precisamente o campo magnético externo.\\
+\begin{figure}[h]
+\begin{center}
+%\includegraphics[angle=0,width=0.6\textwidth,clip]{figC16_001.eps}
+\renewcommand{\figurename}{{\bf Fig.}}
+\caption{Superfície da equação de estado para um sistema magnético com uma transição de fase de segunda ordem no campo zero ($h=0$). A superfície é simétrica sobre $M \rightarrow -M$. A metade mais abaixo não é mostrada.}
+\label{figC16_001}
+\end{center}
+\end{figure}
+Quando $H \neq 0$, o parâmetro de ordem é uma função regular da temperatura; mas pode desenvolver uma derivada descontínua na temperatura crítica quando $h=0$. A presença de um campo externo sumprimi a transição de fase, como ilustrado pela equação de estado mostrada qualitativamente na Fig. \ref{figC16_001}.
+
+Usando $H$ e a temperatura $T$ como variáveis termodinâmicas independentes, nós podemos obter todas as funções termodinâmicas a partir da energia livre de Gibbs $G(H,T)$, dada por
+\begin{equation}
+Q(H,T)=e^{-G(H,T)/kT}=\text{Tr}~e^{-{\cal H}/kT}
+\end{equation}
+onde ${\cal H}$ é um Hamiltoniano apropriado. Algumas fórmulas úteis são dadas abaixo:
+\begin{eqnarray}
+\text{Magnetização:}      ~~~~~ M&=& - \frac{\partial G}{\partial H} \\
+\text{Susceptibilidade:}  ~~~~~ M&=& \frac{1}{V} \frac{\partial M}{\partial H}\\
+\text{Energia interna}    ~~~~~ M&=&G - T\frac{\partial G}{\partial T}\\
+\text{Capacidade térmica} ~~~~~ M&=& T^{2}\frac{\partial^{2} G}{\partial^{2} T}
+\end{eqnarray}
+
+\begin{table}[h]
+\renewcommand{\tablename}{{\bf Tabela}}
+\caption{Parâmetro de ordem}
+\begin{center}
+\vspace{0.2cm}
+\begin{tabular}{l c c}
+\hline
+\\[-0.3cm]
+{\bf\it Transição} & {\bf\it  Parâmetro de Ordem}  & {\bf\it Campo conjugado}\\
+\\[-0.4cm]
+\hline
+\\[-0.3cm]
+Ferromagnética     & $M$ & $H$\\[0.3cm]
+Anferromagnética   & $M$ chocado & $H$ chocado\\[0.3cm]
+gás-líquido        & $V_{G}-V_{L}$ & $P-P_{c}$\\[0.3cm]
+Superfluidês       & $\int d^{3}r <\psi> $ & Não observável\\[0.3cm]
+Supercondutividade & $\int d^{3}r <\psi_{\uparrow} \psi_{\downarrow}>$ & Não observável\\
+\\[-0.3cm]
+\hline\\
+\end{tabular}
+\end{center}
+\label{parametros_de_ordem}
+\end{table}
+Na Tabela \ref{parametros_de_ordem} nós damos alguns exemplos de parâmetros de ordem. A escolha de um parâmetro de ordem é um assunto fenomenológico e nem sempre é óbvio. No caso da superfluidês e da supercondutividade, o parâmetro de ordem correto foi descoberto somente depois do fenômeno ser entendido teoricamente, muito depois deles terem sido observados experimentalmente. Em alguns casos, tais como transições de vidros de spins, nós não estamos certos que o parâmetro de ordem é, ou mesmo se o conceito em si é apropriado.
+
+\section{A função de correlação e o teorema de flutuação-dissipação}
+\noindent
+
+Em adição as quantidades termodinâmicas dadas acima, a função de correlação contém informações importantes sobre a transição de fase. Nós assumimos que existe uma densidade do parâmetro de ordem $m(\vec{r})$, dessa forma o parâmetro de ordem pode ser escrito como
+\begin{equation}
+M=\langle \int d^{3} m(\vec{r}) \rangle
+\label{def_M}
+\end{equation}
+onde $\langle ~ \rangle$ denota a média nos ensembles. A função de correlação é definida como
+\begin{equation}
+\Gamma(\vec{r})=\langle m(\vec{r}) m(0) \rangle- \langle m(\vec{r})\rangle \langle m(0)\rangle
+\label{funcao_de_correlacao}
+\end{equation}
+Ela mede a "persistência da memória" das variações espaciais na densidade do parâmetro de ordem. Para um sistema translacionalmente invariante o último termo pode ser escrito como $\langle m(0)\rangle^{2}$, pois $\langle m(\vec{r})\rangle=\langle m(0)\rangle$.
+
+Denotando a transformada de Fourier por $\sim$. Por exemplo,
+\begin{eqnarray}
+m(\vec{r})=\int \frac{d^{3}k}{(2 \pi)^{3}} ~ e^{ik \cdot r} \tilde{m}(\vec{k})
+\nonumber
+\\
+\tilde{m}(\vec{k})=\int d^{3}r ~ e^{ik \cdot r} m(\vec{r})
+\end{eqnarray}
+Nós temos $\tilde{m}(\vec{k})^{\ast}=\tilde{m}(\vec{-k})$, desde que $m(\vec{r})$ seja real. Tomando a transformada de Fourier de ambos os lados de (\ref{funcao_de_correlacao}), nós obtemos
+\begin{equation}
+\tilde{\Gamma}(\vec{r})=\langle \tilde{m}(\vec{k}) m(0) \rangle- \langle m(0)\rangle^{2} (2 \pi)^{3} \delta(\vec{k})
+\label{funcao_de_correlacao_fourier}
+\end{equation}
+Considere $H=0$ e $T>T_{c}$. O último termo desaparece pois $\langle m(0)\rangle=0$. Substituindo a expressão
+\begin{eqnarray*}
+m(0)=(2 \pi)^{-3} \int d^{3}k ~ \tilde{m}(\vec{k})
+\end{eqnarray*}
+em (\ref{funcao_de_correlacao_fourier}), e notando que
+\begin{eqnarray*}
+\langle \tilde{m}(\vec{k}) \tilde{m}(\vec{p}) \rangle=(2 \pi)^{3} \delta(\vec{k}+\vec{p})|\tilde{m}(\vec{k})|^{2}
+\end{eqnarray*}
+nós obtemos a fórmula
+\begin{equation}
+\tilde{\Gamma}(\vec{k})=\langle|\tilde{m}(\vec{k})|^{2}\rangle
+\label{gamma_tilde}
+\end{equation}
+
+A média do quadrado em (\ref{gamma_tilde}) pode ser calculada atraes do seguinte argumento intuitivo. A flutuação poderia ser isotrópica, desde que não haja direção intrínseca. Dessa forma a ordem mais baixa na densidade do parâmetro de ordem, a energia livre poderia ser da forma
+\begin{equation}
+G=\int d^{3}r~\left[c_{1} |\bigtriangledown m(\vec{r})|^{2}\right]= \int \frac{d^{3}k}{(2 \pi)^{3}}~(c_{1}k^{2}+c_{2})~|\tilde{m}(\vec{k})|^{2}
+\end{equation}
+onde $c_{1}$ e $c_{2}$ são parâmetros que podem depender da temperatura. A energia livre residindo no $k$-ésimo modo de Fourier é então
+\begin{equation}
+G(\vec{k})=(c_{1}k^{2}+c_{2})~|\tilde{m}(\vec{k})|^{2}
+\end{equation}
+cujo valor médio poderia ser $k_{B}T$, pela equipartição da energia. Sendo
+\begin{equation}
+\langle |\tilde{m}(\vec{k})|^{2} \rangle = \frac{k_{B}T}{c_{1}k^{2}+c_{2}}
+\end{equation}
+Isso dá a transmada de Fourier da função de correlação na "forma de Ornsteion-Zernike". Tomando a transformada de Fourier inversa nós obtemos
+\begin{equation}
+\Gamma(\vec{r})=\frac{e^{-r/\xi}}{r}
+\end{equation}
+onde $\xi=\sqrt{c_{1}/c_{2}}$ é o "comprimento de correlação", uma medida da memória espacial. Experimentalmente $\xi$ diverge no ponto crítico. A função de correlação então se torna $1/r$, a qual não contém nenhum comprimento característico. Nó vamos derirar $\Gamma$ em $d$ dimensões no próximo capítulo, sob essencialmente as mesmas hipóteses em modos diferentes (veja () e ()).
+
+De (\ref{def_M}) nós podemos reescrever o parâmetro de ordem mais explicitamente na forma
+\begin{equation}
+\frac{M}{V}=\frac{1}{V} \int d^{3}r \frac{\text{Tr}[m(\vec{r})~e^{-{\cal H}/kT}]}{\text{Tr}~e^{-{\cal H}/kT}} = \frac{\text{Tr}[m(0)~e^{-{\cal H}/kT}]}{\text{Tr}~e^{-{\cal H}/kT}}
+\label{M_por_V}
+\end{equation}
+A última relação é obtida sobre a hipótese que o sistema é translacionalmente invariante. Assumindo que o campo mgnético $H$ está acoplado lineramente com o parâmetro de ordem:
+\begin{equation}
+{\cal H}={\cal H}_{0}-H\int d^{3}r~m(\vec{r})
+\end{equation}
+onde ${\cal H}_{0}$ é o Hamiltoniano para $H=0$. Derivando (\ref{M_por_V}) com respeito a $H$, nós obtemos
+\begin{equation}
+\chi = \frac{1}{kT}\int d^{3}r ~ \left[\langle m(\vec{r}) m(0) \rangle- \langle m(\vec{o})\rangle^{2} \right]
+\end{equation}
+Comparando com a definição da função de correlação temos
+\begin{equation}
+\chi = \frac{1}{kT} \int d^{3}r~\Gamma(\vec{r})
+\end{equation}
+Esse é um caso especial da relação geral conhecida como "teorema da flutuação-dissipação". Nós temos encontrado exemplos disso na relação entre a capacidade térmica e as flutuação de energia (Eq. ()), e na relação entre compressibilidade e flutuações de densidade (Eq. ()).
+
+\section{Expoentes cr\'iticos}
+\noindent
+
+Os expoentes críticos descrevem a natureza das singularidades em várias quantidades mensuráveis no ponto crítico. Seis são comumente reconhecidos, denotados particularmente (nesse ponto) por uma tola lista de letras Gregas: $\alpha$, $\beta$, $\gamma$, $\delta$, $\eta$, $\nu$. Denotando a temperatura crítica por $T_{c}$, e introduzindo a quantidade
+\begin{equation}
+t=\frac{T-T_{c}}{T_{c}}
+\end{equation}
+Nós supomos que, no limite $t \rightarrow 0$, qualquer quantidade termodinâmica pode ser decomposta em uma parte "regular", a qual permanece finita (mas não necessariamente contínua), mais uma parte "singular" que pode ser divergente, ou ter derivadas divergentes. A parte singular é suposta a ser proporcional a alguma potência de $t$, geralmente fracional.
+
+Os primeiros quatro expoentes críticos são definidos como se segue:
+\begin{eqnarray}
+\text{Capacidade térmica:} ~&~&~~~ C \sim |t|^{-\alpha}\\
+\text{Parâmetro de ordem:} ~&~&~~~ M \sim |t|^{\beta} \label{M_t_beta}\\
+\text{Susceptibilidade:}   ~&~&~~~ \chi \sim |t|^{-\gamma}\\
+\text{Equação de estado }(t=0)\text{:} ~&~&~~~ M \sim H^{1/\delta}
+\end{eqnarray}
+Aqui $~\sim~$ significa "possui uma parte singular proporcional a". Desde que todas as três primeiras relações referem-se a uma transição de fase, fica subentendido que $H=0$. A última, ao contrário, refere-se especificamente ao caso $H \neq 0$.
+
+Nós devemos ter em mente que essas comportamento referem-se somente a parte singular. Por exemplo, $\alpha=0$ significa que a capacidade térmica não tem parte singular; mas ele ainda pode ter uma discontinuidade finita em $t=0$.
+
+As definições acima assumem implicitamente que as singularidades são do mesmo tipo, se nós aproximarmos o ponto crítico por cima ou por baixo. Isso teve origem tanto teoricamente quanto experimentalmente, exceto para $M$, o qual é identicamente nulo acima do ponto crítico por definição. Assim obviamente (\ref{M_t_beta}) faz sentido somente para $t<0$. Nós não nos aborreceremos fazendo essa qualificação toda vez.
+
+As últimas duas na sopa de expoentes do alfabeto Grego consiste a função de correlação, a qual nós assumiremos ter a forma de Ornstein-Zernike:
+\begin{equation}
+\Gamma(r) \stackrel{t \rightarrow 0}{\longrightarrow} r^{-p}~e^{-r/\xi}
+\label{gamma_r_ornsteion-zernike}
+\end{equation}
+Então, $\nu$ e $\eta$ são definidos como se segue:
+\begin{eqnarray}
+\text{Comprimento de correlação:} ~&~&~~~ \xi \sim |t|^{-\nu}\\
+\text{Decaimento da lei de potência em }(t=0)\text{:} ~&~&~~~ p = d-2+\eta
+\end{eqnarray}
+
+A importância dos expoentes críticos está na sua universalidade. Como experimentos têm mostrado, sistemas muito diferentes, com temperaturas críticas diferindo de ordens de magnitude, aproximadamente compartilham os mesmos expoentes críticos. Suas definições têm sido ditadas pela conveniência experimental. Algumas outras combinações lineares deles têm mais importância fundamental, como nós veremos mais tarde.
+
+Só dois dos seis expoentes críticos definidos na discussão precedente são independentes. devido as seguintes "leis de escala":
+\begin{eqnarray}
+\text{Fisher:}     ~&~&~~~ \gamma=\nu(2-\eta)\\
+\text{Rushbrooke:} ~&~&~~~ \alpha+2\beta+\gamma=2\\
+\text{Widom:}      ~&~&~~~ \gamma=\beta(\delta-1)\\
+\text{Josephson:}  ~&~&~~~ \nu d=2-\alpha
+\end{eqnarray}
+onde, na última relação, $d$ é a dimensionalidade do espaço.
+
+A tabela (\ref{expoentes_criticos}) resume os valores experimentais dos expoentes críticos bem com os resultados de alguns modelos teóricos. Nós podemos ver que as leis de escala parecem ser universais, mas os expoentes individuais mostram desvios do comportamente universal real. A teoria baseada no grupo de renormalização, como nós discutiremos no capítulo \ref{RG}, sugere que sistemas caem em "classes de universalidade", e que os índices críticos são os melsmos somente numa classe de universalidade.
+
+
+\begin{table}[h]
+\renewcommand{\tablename}{{\bf Tabela}}
+\caption{Expoentes críticos}
+\begin{center}
+\vspace{0.2cm}
+\begin{tabular}{l c l c c c c}
+\hline
+\\[-0.3cm]
+{\it Expoente} & {\it  TH}  & {\it EXPT} & {\it MFT} & {\it ISING2} & {\it ISING3} & {\it HEIS3}\\
+\\[-0.4cm]
+\hline
+\\[-0.3cm]
+$\alpha$                      &     & $0-0.14$      & $0$   & $0$   & $0.12$ & $-0.14$ \\
+$\beta$                       &     & $0.32-0.39$   & $1/2$ & $1/8$ & $0.31$ & $0.3$   \\
+$\gamma$                      &     & $1.3-1.4$     & $1$   & $7/4$ & $1.25$ & $1.4$   \\
+$\delta$                      &     & $4-5$         & $3$   & $15$  & $5$    &         \\
+$\nu$                         &     & $0.6-0.7$     & $1/2$ & $1$   & $0.64$ & $0.7$   \\
+$\eta$                        &     & $0.05$        & $0$   & $1/4$ & $0.05$ & $0.04$  \\
+$\alpha+2\beta+\gamma$        & $2$ & $2.00\pm0.01$ & $2$   & $2$   & $2$    & $2$     \\
+$(\beta \delta-\gamma)/\beta$ & $1$ & $0.93\pm0.08$ & $1$   & $1$   & $1$    &         \\
+$(2-\eta)\nu/\gamma$          & $1$ & $1.02\pm0.05$ & $1$   & $1$   & $1$    & $1$     \\
+$(2-\alpha)/\nu \gamma$       & $1$ &               & $4/d$ & $1$   & $1$    & $1$     \\
+\\[-0.3cm]
+\hline\\
+\end{tabular}
+\end{center}
+\label{expoentes_criticos}
+\end{table}
+
+\footnote{TH, valores teóricos (das leis de escala)}
+\footnote{Para mais detalhes e referências veja A. Z. Patashinskii e V. L. Pokrovskii, {\it Fluctuation Theory Of Phase Transitions} (Pergamon, Oxford, 1979), Tabela 3, pp. 42-43.}
+
+\begin{table}[h]
+\renewcommand{\tablename}{{\bf Tabela}}
+\caption{Dados críticos}
+\begin{center}
+\vspace{0.2cm}
+\begin{tabular}{l c c}
+\hline
+\\[-0.3cm]
+ & $T_{c} (^{o}C)$ & $P_{c} (atm)$\\
+\\[-0.4cm]
+\hline
+\\[-0.3cm]
+Ne & $-228.7$ & $26.9$\\
+Ar & $1122.3$ & $48$\\
+Kr & $-63.8$ & $54.3$\\
+Xe & $16.6$ & $58$\\
+$\text{N}_{2}$ & $-147$ & $33.5$\\
+$\text{O}_{2}$ & $-118.4$ & $50.1$\\
+$\text{CO}$ & $-140$ & $34.5$\\
+$\text{CH}_{4}$ & $-82.1$ & $45.8$\\
+\\[-0.3cm]
+\hline\\
+\end{tabular}
+\end{center}
+\label{dados_criticos}
+\end{table}
+
+\begin{figure}[h]
+\begin{center}
+%\includegraphics[angle=0,width=0.6\textwidth,clip]{figC16_002.eps}
+\renewcommand{\figurename}{Fig.}
+\caption{Temperatura reduzida vs. densidade reduzida na região de coexistência gás-líquido, para oito substâncias diferentes.}
+\label{figC16_002}
+\end{center}
+\end{figure}
+
+Para dar exemplos atuais de universalidade, nós mostramos na Fig. \ref{figC16_002} a temperatura reduzida $T/T_{c}$ vs. a densidade reduzida $n/n_{c}$ para oito substâncias na regição de coexistência gás-líquido. Os dados críticos são variados, como mostra a Tabela \ref{dados_criticos}; mas os pontos dos dados reduzidos caem numa curva universal. O ramo direito refere-se a fase líquida, e o ramo esquerdo a fase gasosa, os ambos se juntam no ponto crítico. A curva sólida é o fit de Guggenheim\footnote{E. A. Guggenheim, {\it J. Chem. Phys.} {\bf 13}, 253 (1945).}, o qual reproduz os dados do argônio em uma parte em $10^{3}$:
+\begin{eqnarray}
+\frac{n_{L}-n_{G}}{n_{c}}&=&1+\frac{3}{4}\left(1-\frac{T}{T_{c}}\right)
+\nonumber \\
+\frac{n_{L}-n_{G}}{n_{c}}&=&\frac{7}{2}\left(1-\frac{T}{T_{c}}\right)^{1/3}
+\end{eqnarray}
+A primeira equação é conhecida como a "lei do diâmetro retilíneo". A segunda imediatamente mostra que o expoente associado com o parâmetro de ordem possui o valor universal $\beta=1/3$.
+
+Todos os fenômenos físicos se dão em um espaço de três dimensões, é claro. Mas existe situações nas quais o sistema em questão é efetivamente um filme bidimensional, ou uma cadeia unidimensional. A quantidade $d$ então denota a dimensionalidade efetiva. Nós veremos que is tem uma grande importância na determinação da natureza das transições de fase. Por agora nós trabalharemos em $d$ dimensões espaciais, com o vetor coordenada espacial denotado por $x$, o qual possui componentes Cartesianas $x_{i}~(i=1,...,d)$. A magnitude de $x$, e a integração no espaço, serão denotadas respectivamente por
+\begin{eqnarray}
+|x| &\equiv& \left[ \sum_{i=1}^{d}x^{2} \right]^{1/2}
+\nonumber \\
+\int (dx) &\equiv& \int d^{d}x
+\end{eqnarray}
+
+\section{A hip\'otese de escala}
+\noindent
+
+Como o próprio nome diz, a hipótese de escala tem a ver com como várias quantidades mudam com o mudança do comprimento da escala. O valor de uma quantidade com a dimensão deve ser expressada em termos da unidade de comprimento padrão, e isso muda quando o padrão é mudado. Dessa maneira, uma quantidade adimensional será invariante; outras mudarão de acordo com suas dimensões. Importantes leis de escala relacionadas as funções termodinâmicas podem ser obtidas de uma hipótese simples (mas forte) que, próximo ao ponto crítico, o comprimento de correlação $\xi$ é o único comprimento característico do sistema, em termos do qual todos os outros comprimentos vedem ser medidos. Essa é a "hipótese de escala". Nós expressaremos isso concretamente por diferentes caminhos, incorporando algumas poucas hipóteses adicionais.\\
+\\
+\noindent
+{\bf Análise Dimensional}\\
+\\
+Um modo para implementar a hipótese de escala é assumir que a quantidade de dimensão $(\text{comprimento})^{-D}$ é proporcional a $\xi^{-D}$ próximo ao ponto crítico.
+
+Vamos primeiramente determinar as dimensões da várias quantidade de interesse. Primeiro nós notamos que $G/k_{B}T$ é adimensional. Como $g=G/k_{B}TV$ é de dimensão $(\text{comprimento})^{-d}$, e nós indicamos esse fato na seguinte notação:
+\begin{equation}
+[g]=L^{-d}
+\end{equation}
+(Nós consideramos $g$ ao invés de $G/k_{B}T$ porque nós queremos fazer um acordo com quantidades finitas no limite termodinâmico). Normalizando a função de correlação de acordo com (\ref{gamma_r_ornsteion-zernike}), nós temos
+\begin{equation}
+[\Gamma(x)]=L^{2-d-\eta}
+\end{equation}
+Por definição isso tem a mesma dimesão que $\langle m(0)\rangle^{2}$. Assim
+\begin{equation}
+[M/V]=L^{(2-d-\eta)/2}
+\end{equation}
+Pelo teorema de flutuação-dissipação, nós temos
+\begin{equation}
+[k_{B}T\chi]=L^{2-\eta}
+\end{equation}
+A dimensão do campo conjugado pode ser obtida da relação $M=-\partial G/\partial H$ com $[H/k_{B}T]=[g]/[M/V]$, ou
+\begin{equation}
+[H/k_{B}T]=L^{(2+d-\eta)/2}
+\end{equation}
+Esses resultados são sumarizados na Tabela \ref{dimensoes_e_expoentes}. O expoente de $L$ é denotado por $-D$, e $D$ é chamado de "dimensão" (o sinal negativo foi introduzido tal que uma quantidade muda por um fator $b^{D}$ qyabdi a unidade de comprimento aumenta por um fator $b$).
+
+\begin{table}[h]
+\renewcommand{\tablename}{{\bf Tabela}}
+\caption{Dimensões e expoentes}
+\begin{center}
+\vspace{0.2cm}
+\begin{tabular}{l c c c}
+\hline
+\\[-0.3cm]
+{\it Função F} & {\it Dimensão D} & {\it Hipótese de escala do expoente} & {\it Definição} \\
+\\[-0.4cm]
+\hline
+\\[-0.3cm]
+$G/k_{B}TV$  & $d$            & $\nu d$            & $2-\alpha$     \\
+$M/V$        & $(d-2-\eta)/2$ & $-\nu(d-2-\eta)/2$ & $\beta$        \\
+$k_{B}T\chi$ & $\eta-2$       & $-\nu(2-\eta)$     & $-\gamma$      \\
+$H/k_{B}T$   & $(2+d-\eta)/2$ & $\nu(2+d-\eta)/2$  & $\beta \delta$ \\
+\\[-0.3cm]
+\hline\\
+\end{tabular}
+\end{center}
+\label{dimensoes_e_expoentes}
+\end{table}
+
+Agora substitua o comprimento $L$ nas fórmulas acima por $\xi$. Usando $\xi \sim t^{-\nu}$, nós obtemos todos os expoentes críticos. Os resultados estão listados na Tabela \ref{dimensoes_e_expoentes}. Comparando eles com suas definições obtemos as relações
+\begin{eqnarray}
+2-\alpha     &=& \nu d            \nonumber \\
+\beta        &=& -\nu(2-d-\eta)/2 \nonumber \\
+\gamma       &=& \nu(2-\eta)       \nonumber \\
+\beta \delta &=& \nu(2+d-\eta)/2  \nonumber
+\end{eqnarray}
+
+A primeira é a lei dde Josephson, e a terceira é a lei de Fisher. Subtraindo e adicionando, nós derivamos da segunda e da quarta as leis de Rushbrooke e Widom.\\
+\\
+\noindent
+{\bf Formas de escala}\\
+\\
+Outro modo para implementar a hipótese de escala é assumir que, na ausência do campo externo, a função de correlação próximo a $t=0$ tem a forma funcional
+\begin{equation}
+\Gamma(x)
+\stackrel{t\rightarrow0^{\pm}}{\longrightarrow}
+|x|^{-p} {\cal F}_{\pm}(x/\xi)~, ~~~~~~~~ (H=0)
+\label{gamma_de_x}
+\end{equation}
+onde $p=d-2+\eta$. Na presença de um campo externo $H$ acima é generalizado para 
+\begin{equation}
+\Gamma(x,H) \stackrel{t\rightarrow0^{\pm}}{\longrightarrow} |x|^{-p} {\cal R}_{\pm}(x/\xi,H\xi^{y})
+\end{equation}
+onde $y$ é alguma constante. Isso pode ser justificado fisicamente como se segue: Os momentos magnéticos no sistema são fortemente relacionados com o comprimento de correlação, o qual tende ao infinito quando $t \rightarrow 0$. Então, existe uma tendência natural para muitos blocos grandes de momentos magnéticos se alinharem. O efeito de um campo externo é então magnificado, com o fator de magnificação proporcional a alguma potência do comprimento de correlação. Portanto nós esperamos $H$ ocorrer somente na combinação $H\xi^{y}$. Fazendo a substituição
+\begin{eqnarray*}
+\xi^{y} \rightarrow |t|^{-\nu y}
+\end{eqnarray*}
+nós podemos escrever
+\begin{equation}
+\Gamma(x,H) \stackrel{t\rightarrow0^{\pm}}{\longrightarrow} |x|^{-p} {\cal R}_{\pm}(x/\xi,H/|t|^{\Delta})~, ~~~~~~~\Delta=\nu y
+\label{gamma_de_xH}
+\end{equation}
+Essa é chamada de uma "forma de escala" da função de correlação. A quantidade $\Delta$ é algumas vezes chamada de "expoente de gap", pois (\ref{gamma_de_xH}) ganha um fator $t^{\Delta}$ quando integrado com respeito a $H$.
+
+É instrutivo deveriar as leis de escala novamente das formas de escala. Pelo teorema da flutuação-dissipação e (\ref{gamma_de_x}), nós temos
+\begin{eqnarray*}
+\chi=\frac{1}{k_{B}T}\int (dx) \Gamma(x)=\frac{1}{k_{B}T}\int (dx) |x|^{-p} {\cal F}_{\pm}(x/\xi)
+\end{eqnarray*}
+Mudando a variável de integração para $x/\xi$, nós obtemos
+\begin{equation}
+\chi= \text{const.}\xi^{d-p}~\sim~|t|^{-\nu(2-\eta)}
+\end{equation}
+o qual rende $\gamma=\nu(2-\eta)$, lei de escala de Fisher.
+
+De modo similiar, quando $H=0$, nós usamos o teorema da flutuação-dissipação junto com (\ref{gamma_de_xH}) para deduzir
+\begin{equation}
+\chi~\sim~\xi^{2-\eta}{\cal K}_{\pm}(H\xi^{y})~\sim~|t|^{-\gamma}{\cal K}_{\pm}(H/t|^{\Delta})
+\end{equation}
+Integrando isso com respeito a $H$ dá a forma de escala da equação de estado:
+\begin{equation}
+M~\sim~|t|^{\Delta-\gamma}{\cal M}_{\pm}(H/t|^{\Delta})
+\label{M_eq_de_estado}
+\end{equation}
+a qual, para $H=0$, fica $M~\sim~|t|^{\Delta-\gamma}$. Dessa forma o expoente de gap é dado por
+\begin{equation}
+\Delta=\beta+\gamma
+\label{expoente_de_gap}
+\end{equation}
+
+Integrando (\ref{M_eq_de_estado}) com respeito a $H$ rende a forma de escala para a energia livre de Gibbs:
+\begin{equation}
+G~\sim~|t|^{2\Delta-\gamma}{\cal G}_{\pm}(H/t|^{\Delta})
+\label{energia_G_de_xi}
+\end{equation}
+Em $H=0$, nós temos $G~\sim~|t|^{2\Delta-\gamma}$, e então
+\begin{equation}
+C~\sim~|t|^{2\Delta-\gamma-2}~\sim~|t|^{2\beta+\gamma-2}
+\end{equation}
+a qual fornece $\alpha+2\beta+\gamma=2$, a lei de Rushbrooke.
+
+Em $t=0$ e $H \neq 0$, o parâmetro de ordem é assumido para ser finito. Então a função ${\cal M}_{\pm}$ em (\ref{M_eq_de_estado}) deve ter o seguinte comportamento:
+\begin{eqnarray}
+{\cal M}_{\pm}(H/t|^{\Delta})\stackrel{t\rightarrow0}{\longrightarrow}|t|^{\alpha+\Delta-2}=|t|^{-\beta}
+\nonumber \\
+{\cal M}_{\pm}(x)\stackrel{x\rightarrow0}{\longrightarrow}x^{\beta/\Delta}
+\end{eqnarray}
+Nós utilizamos a relação $2-\alpha-\Delta=\beta$, que foi obtida de (\ref{expoente_de_gap}), e a lei de escala de Rushbrooke. Utilizando (\ref{M_eq_de_estado}), nós encontramos agora
+\begin{equation}
+M\stackrel{t\rightarrow0}{\longrightarrow}|t|^{\beta}(H/|t|^{\Delta})^{\beta/\Delta}=H^{\beta/\Delta}
+\end{equation}
+o qual diz $\delta=\Delta/\beta$. Usando (\ref{expoente_de_gap}) então teremos a lei de escala de Widom $\gamma=\beta(\delta-1)$.
+
+Finalmente, para derivar a lei de escala de Josephson da forma de escala, ós temos que fazer uma hipótese extra conhecida como "hiperescala", que a $H=0$ a quantidade de energia livre residindo num volume espacial de tamanho linear $\xi$ é da ordem de $k_{B}T$. Isso é consistente com a idéia de que $\xi$ é a única escala de comprimento, então não podem existir flutuações com comprimento de onda menores que $\xi$. Consequentemente a energia livre total é da ordem de $k_{B}TV/\xi^{d}$. Assim como $t \rightarrow 0$ nós temos
+\begin{equation}
+G~\sim~\xi^{-d}~\sim~|t|^{\nu d}
+\end{equation}
+Comparando com (\ref{energia_G_de_xi}) a $H=0$ temos $\nu d=2\Delta-\gamma$, o qual por (\ref{expoente_de_gap}) leva a $\nu d=2-\alpha$, a lei de escala de Josephson.\\
+\\
+\noindent
+{\bf Forma de escala de Widom}\\
+\\
+Se existir pares de variáveis conjugadas na teoria além de $M$ e $H$, digamos $\phi_{i}$ e $J_{i}$, então a forma de escala da energia livre pode ser generalizada para a seguinte:
+\begin{equation}
+T~\sim~|t|^{2-\alpha}{\cal G}_{\pm}\left(\frac{H}{|t|^{\beta \delta}},\frac{J_{1}}{|t|^{\Delta_{1}}},\frac{J_{2}}{|t|^{\Delta_{2}}},... \right)
+\label{forma_de_widom}
+\end{equation}
+a qual é conhecida como forma de escala de Widom. Os campos $H,J_{1},J_{2},...$ são chamados de campos de escala. Os expoentes associados $\Delta,\Delta_{1},\Delta_{2},...$ chamado "expoentes de corte", controlam a importância relativa do campos próximo a $t=0$. Por exemplo, se $\Delta_{i}<0$, então a dependência em $J_{i}$ diminui próximo a $t=0$, e o campo é dito ser "irrelevante"; se $\Delta_{i}>0$, o campo $J_{i}$ é "relevante"; enquanto se $\Delta_{i}=0$, nós teríamos um caso "marginal". Nós devemos ter em mente que a forma de escala acima especificamente refere-se a vizinhança de um ponto crítico particular. Um sistema pode ter mais de um ponto crítico, e uma forma como (\ref{forma_de_widom}) é supostamente respeitada próximo a cada um deles, com diferentes conjuntos de expoentes de corte.
+
+\section{Invariância de escala}
+\noindent
+
+\section{Excitações de Goldstone}
+\noindent
+
+\section{A importância da dimensionalidade}
+\noindent

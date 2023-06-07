@@ -1,0 +1,94 @@
+\chapter{A solução de Onsager}
+\noindent
+
+\section{Formulação do modelo de Ising bidimensional}
+
+{\bf Formulação da matriz}\\
+\\
+N\'os formulamos o modelo de Ising bidimens em termos de matrizes como um passo preliminar em dire\c{c}\~ao a solu\c{c}\~ao exata do modelo. Considere uma rede quadrada com $N=n^{2}$ spins consistindo de $n$ linhas e $n$ colunas, como mostrado na Fig. \ref{figC15_001}. Vamos imaginar que a rede seja aumentada de uma linha e uma coluna com necessidade que a configura\c{c}\~ao da $(n+1)$-\'esima linha e coluna seja id\^entica aqyeka da primeira linha e coluna, respectivamente. Essa condi\c{c}\~ao de contorno favorece a rede com topologia de um tor\'oide, como descrito na Fig. \ref{figC15_002}. Seja $\mu_{\alpha}$ ($\alpha=1,...,n$) a cole\c{c}\~ao de todos as coordenadas dos spins na $\alpha$-\'esima linha:
+\begin{equation}
+\mu_{\alpha}\equiv\{s_{1},s_{2},...,s_{n}\}
+\end{equation}
+A condi\c{c}\~ao de contorno toroidal implica a defini\c{c}\~ao
+\begin{equation}
+\mu_{n+1}\equiv\mu_{1}
+\end{equation}
+A configura\c{c}\~ao de todo rede \'e espeficida por $\{\mu_{1},...,\mu_{2}\}$. Por hip\'otese, a $\alpha$-\'esima linha interage somente com a $(\alpha-1)$-\'esima linha. Sendo $E(\mu_{\alpha},\mu_{\alpha+1})$ a energia de intera\c{c}\~ao entre a $\alpha$-\'esima e a $(\alpha+1)$-\'esima linha. Seja $E(\mu_{alpha})$ a energia de intera\c{c}\~ao dos spins com a $\alpha$-\'esima linha mais sua energia de intera\c{c}\~ao com um campo magn\'etico externo. N\'os podemos escrever
+\begin{eqnarray}
+E(\mu,\mu')&=&-\epsilon \sum_{k=1}^{n} s_{k} s_{k}'
+\nonumber
+\\
+E(\mu)&=&-\epsilon \sum_{k=1}^{n} s_{k} s_{k+1}-H \sum_{k=1}^{n} s_{k}
+\end{eqnarray}
+onde $\mu$ e $\mu'$ respectivamente denotam a cole\c{c}\~ao de coordenadas dos spins de duas linhas vizinhas:
+\begin{eqnarray}
+\mu&\equiv&\{s_{1},...,s_{n}\}
+\nonumber
+\\
+\mu&\equiv&\{s_{1}',...,s_{n}'\}
+\end{eqnarray}
+\begin{figure}[h]
+\begin{center}
+%\includegraphics[angle=0,width=0.6\textwidth,clip]{figC15_001.eps}
+\renewcommand{\figurename}{Fig.}
+\caption{Rede de Ising bidimensional.}
+\label{figC15_001}
+\end{center}
+\end{figure}
+\begin{figure}[h]
+\begin{center}
+%\includegraphics[angle=0,width=0.6\textwidth,clip]{figC15_002.eps}
+\renewcommand{\figurename}{Fig.}
+\caption{Topologia da Rede de Ising bidimensional.}
+\label{figC15_002}
+\end{center}
+\end{figure}
+A condi\c{c}\~ao de contorno toroidal implica que cada linha
+\begin{equation}
+s_{n+1}\equiv s_{1}
+\end{equation}
+A energia total da rede para a configura\c{c}\~ao $\{\mu_{1},...,\mu_{n}\}$ \'e dada por
+\begin{equation}
+E_{I}\{\mu_{1},...,\mu_{n}\}=\sum_{\alpha=1}^{n}\left[E(\mu_{\alpha},\mu_{\alpha+1})+E(\mu_{\alpha}) \right]
+\end{equation}
+A fun\c{c}\~ao de parti\c{c}\~ao \'e
+\begin{equation}
+Q_{I}(H,T)=\sum_{\mu_{1}}...\sum_{\mu_{n}}
+\exp \{ -\beta \sum_{\alpha=1}^{n}\left[E(\mu_{\alpha},\mu_{\alpha+1})+E(\mu_{\alpha}) \right] \}
+\end{equation}
+Seja a matriz\footnote{A partir de agora todas as matrizes $2^{n}\times 2^{n}$ s\~ao denotadas por letras do tipo sans serif: , . } $2^{n}\times 2^{n}$ P definida seus elementos de matriz sejam
+\begin{equation}
+<\mu| P |\mu'>\equiv
+\exp^{-\beta \left[E(\mu,\mu')+E(\mu) \right]}
+\end{equation}
+Ent\~ao
+\begin{eqnarray}
+Q_{I}(H,T)&=&\sum_{\mu_{1}}...\sum_{\mu_{n}}
+<\mu_{1}| P |\mu_{2}><\mu_{2}| P |\mu_{3}>...<\mu_{n}| P |\mu_{1}>
+\nonumber
+\\
+&=&\sum_{\mu_{1}}<\mu_{1}| P^{n} |\mu_{1}>=Tr P^{n}
+\label{traco}
+\end{eqnarray}
+Desde que o tra\c{c}o da matriz \'e independente da representa\c{c}\~ao de matriz, o tra\c{c}o em \ref{traco} \footnote{O fati de $Q_{I}$ ser da forma de um tra\c{c}o \'e uma conseq\"u\^encia de.} pode ser calculado trazendo P em sua forma diagonal:
+\begin{equation}
+P=\left[
+\begin{array}{clcr}
+\lambda_{1} &             &        & \\
+            & \lambda_{2} &        & \\
+            &             & \ddots & \\
+            &             &        & \lambda_{2^{n}}
+\end{array}
+\right]
+\end{equation}
+onde $\lambda_{1},\lambda_{2},...,\lambda_{2^{n}}$ s\~ao os $2^{n}$ auto-valores de $P$. A matriz $P^{n}$ \'e ent\~ao diagonal, com os elementos da matriz diagonal $(\lambda_{1})^{n},(\lambda_{2})^{n},...,(\lambda_{2^{n}})^{n}$. Assim
+\begin{equation}
+Q_{I}(H,T)=\sum_{\alpha=1}^{2^{n}}(\lambda_{\alpha})^{n}
+\end{equation}
+
+
+\section{Digress\~ao matem\'atica}
+\noindent
+
+\section{A solu\c{c}\~ao}
+\noindent

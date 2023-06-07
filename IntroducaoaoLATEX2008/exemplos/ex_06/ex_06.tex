@@ -1,0 +1,55 @@
+% Oficina de LaTeX (19.05.2008)
+% Autor: Leandro Gutierrez Rizzi
+% Exemplo 06
+
+\documentclass[11pt,leqno]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{a4wide}
+\usepackage{amsmath}
+
+\baselineskip=14pt
+
+\begin{document}
+
+\newcommand{\somatorio}[1]{
+\sum_{n=1}^{\infty} #1
+}
+\begin{eqnarray*}
+\somatorio{x^{n}} \\
+\somatorio{\frac{(-1)^n x^{n}}{n!}}
+\end{eqnarray*}
+
+\vspace{2.0cm}
+
+\newcommand{\integralimpropria}[2]{
+\begin{equation}
+\int_{-\infty}^{\infty}#2(#1)d#1
+\nonumber
+\end{equation}
+}
+
+\integralimpropria{r}{g}
+
+\integralimpropria{E}{\Omega_{1}}
+
+\vspace{2.0cm}
+
+\newcommand{\matriz}[2]{
+#1= \hbar \left[
+\begin{array}{clcr}
+#2_{1} &        &        &        \\
+       & #2_{2} &        &        \\
+       &        & \ddots &        \\
+       &        &        & #2_{n}
+\end{array}
+\right]
+}
+
+\begin{equation}
+\matriz{M}{\lambda}  ~~~~~~~~ \hbar = \text{constante de Planck}
+\nonumber
+\end{equation}
+
+\end{document}

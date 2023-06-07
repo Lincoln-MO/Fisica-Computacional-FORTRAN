@@ -1,0 +1,68 @@
+\noindent
+Este {\it ainda} \'e o seu {\bf primeiro} documento utilizando \LaTeX.\\
+Contudo, algumas modifica\c{c}\~oes foram
+ feitas para estudarmos alguns
+comandos b\'asicos e formata\c{c}\~oes. \'E evidente que estudaremos primeiro o jeito dif\'icil!!!
+
+Como j\'a dizia a letra da m\'usica "Breathe" do \underline{Pink Floyd}:
+
+\begin{quote}
+Corra, coelho corra\\
+Cave aquele buraco e esque\c{c}a o sol\\
+E quando finalmente o trabalho terminar\\
+N\~ao se sente, \'e hora de cavar um outro.
+\end{quote}
+
+\newpage
+
+\begin{center}
+Podemos centralizar o texto para mostrar os diversos tamanhos de fontes:
+
+\vspace{0.5cm}
+
+{\Huge Huge}
+
+\vspace{0.5cm}
+
+{\huge huge}
+
+\vspace{0.5cm}
+
+{\Large Large}
+
+\vspace{0.5cm}
+
+{\large large}
+
+\vspace{0.5cm}
+
+{\small small}
+
+\vspace{0.5cm}
+
+{\small tiny}
+
+\end{center}
+
+\begin{flushright}
+Ou ainda podemos alinhar o texto \`a direita para mostrar os tipo de fontes:
+
+\vspace{0.5cm}
+
+{\sffamily Sans Serif}
+
+\vspace{0.5cm}
+
+{\bf {\sffamily Sans Serif bold}}
+
+\vspace{0.5cm}
+
+\texttt{Letra de m\'aquina de escrever}
+
+\vspace{0.5cm}
+
+{\it \texttt{Letra em it\'alico da m\'aquina de escrever}}
+
+\end{flushright}
+
+%\include{ex_01_include}
