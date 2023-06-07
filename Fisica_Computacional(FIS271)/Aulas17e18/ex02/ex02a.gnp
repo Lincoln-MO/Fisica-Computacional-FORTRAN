@@ -1,0 +1,13 @@
+set term eps
+set output "ex02a.eps" 
+set title "Exercício 2 letra a Aulas 17 e 18"
+#set yrange [0:365]
+set xrange [-1:5]
+set xlabel "X"
+set ylabel "Y"
+set border
+set grid
+#set key right bottom
+V(x) = -1+(1-exp(-x))**2
+F(x) = -2*exp(-x)*(1-exp(-x))
+plot V(x) t"V(x)", F(x) t"F(x)"
