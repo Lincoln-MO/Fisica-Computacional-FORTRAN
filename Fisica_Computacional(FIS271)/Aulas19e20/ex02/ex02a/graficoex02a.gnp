@@ -1,0 +1,12 @@
+set term eps
+set output "ex02a.eps" 
+set title "Exercício 2 letra a, Gráfico da distribuição de Boltzmann "
+#set yrange [-100:300]
+#set xrange [0:5]
+set xlabel "Energia"
+set ylabel "F(E,T1)"
+set border
+set grid
+#set key left top
+
+plot "ex02a.dat" w lines lt 1 lw 4 t'Distribuição de Boltzmann'
