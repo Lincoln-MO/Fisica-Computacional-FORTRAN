@@ -1,0 +1,11 @@
+set term eps
+#----------------------GRAFICO CIRCULO-----------------
+
+set output "circulo.eps"
+set border
+set size square
+set pointsize 0.5
+f(x)=sqrt(1-x**2)
+plot "dentro.dat" lt 30, "fora.dat" lt 31, f(x) lt 24 lw 4
+
+

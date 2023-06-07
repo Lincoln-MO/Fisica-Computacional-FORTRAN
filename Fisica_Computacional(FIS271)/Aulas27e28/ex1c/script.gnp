@@ -1,0 +1,19 @@
+set term eps
+#----------------------GRAFICO CIRCULO-----------------
+
+set output "area.eps"
+set border
+set size square
+set pointsize 0.1
+f(x)=acos(-1)
+plot "area.dat" u 1:2,  f(x)
+
+reset
+#---------------------GRAFICO ERRO---------------------
+
+set output "erro.eps"
+set border 
+set pointsize 0.1
+
+g(x)=acos(-1)
+plot "area.dat" u 1:3

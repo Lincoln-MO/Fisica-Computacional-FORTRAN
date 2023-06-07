@@ -1,0 +1,12 @@
+set term eps
+set output "trajetoria.eps"
+set border
+
+#------------------------FIT LINEAR-------------------------
+#g(x) = a*x + b
+#fit g(x) "dados1.dat" using 1:2 via a,b
+
+#------------------------REGRESSÃO LINEAR-------------------
+f(x)= 9.98007991*10**(-13)*x + 2.51952132*10**(-13)
+
+plot  "dados1.dat" t"dados obtidos",  f(x) t"regressão linear"#, g(x) t"fit linear",

@@ -1,0 +1,8 @@
+set term eps
+set output "trajetoria.eps"
+set border
+set xlabel "rx"
+set ylabel "ry"
+
+
+plot "dados1.dat" w line, "dados2.dat" w line,"dados3.dat" w line,"dados4.dat" w line,"dados5.dat" w line,
