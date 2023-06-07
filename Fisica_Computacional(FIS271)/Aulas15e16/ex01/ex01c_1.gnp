@@ -1,0 +1,18 @@
+set term eps
+set output "ex01c_1.eps" 
+set title "Exercício 1 letra c Derivada Segunda três pontos diferença centrada"
+#set yrange [-100:300]
+set xrange [0:5]
+set xlabel "X"
+set ylabel "Y"
+set border
+set grid
+set key left top
+f(x)=(((x+0.10)*exp(x+0.10))-(2*x*exp(x))+((x-0.10)*exp(x-0.10)))/((0.10)**2)
+fduaslinha(x)=2*exp(x) + x*exp(x)
+g(x)=(((x+0.25)*exp(x+0.25))-(2*x*exp(x))+((x-0.25)*exp(x-0.25)))/((0.25)**2)
+
+erro(x) = abs(f(x) - fduaslinha(x))
+errro(x) = abs(g(x) - fduaslinha(x))
+
+plot f(x) w lines lt 1 lw 5 t'f(x)_h=0.10', fduaslinha(x) w lines lt -1 lw 4 t'fduaslinha(x)', erro(x) w lines lt 1 lw 3 t'erro de f_h=0.10' ,   g(x) w lines lt 5 lw 3 t'f(x)_h=0.25', errro(x) w lines lt 4 lw 4 t'erro de f_h=0.25'

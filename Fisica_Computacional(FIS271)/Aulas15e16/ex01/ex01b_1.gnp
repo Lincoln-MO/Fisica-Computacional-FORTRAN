@@ -1,0 +1,18 @@
+set term eps
+set output "ex01b_1.eps" 
+set title "Exercício 1 letra b Três pontos diferença centrada"
+#set yrange [-100:300]
+set xrange [0:5]
+set xlabel "X"
+set ylabel "Y"
+set border
+set grid
+set key left top
+f(x)=(((x+1*(0.10))*exp(x+1*(0.10))) - ((x-1*(0.10))*exp(x-1*(0.10))))/(2*(0.10)) 
+flinha(x)=exp(x) + x*exp(x)
+g(x)=(((x+1*(0.25))*exp(x+1*(0.25))) - ((x-1*(0.25))*exp(x-1*(0.25))))/(2*(0.25)) 
+
+erro(x) = f(x) - flinha(x)
+errro(x) = g(x) - flinha(x)
+
+plot f(x) w lines lt 1 lw 4 t'f(x)_h=0.10', flinha(x) w lines lt -1 lw 3 t'flinha(x)', erro(x) w lines lt 1 lw 1 t'erro de f_h=0.10' ,   g(x) w lines lt 5 lw 4 t'f(x)_h=0.25', errro(x) w lines lt 4 lw 1 t'erro de f_h=0.25'

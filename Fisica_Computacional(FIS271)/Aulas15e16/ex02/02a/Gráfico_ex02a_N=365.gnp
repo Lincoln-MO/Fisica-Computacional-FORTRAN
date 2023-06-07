@@ -1,0 +1,11 @@
+set term eps
+set output "ex02a_N=365.eps" 
+set title "Exercício 2 letra a Aulas 15 e 16 N = 365 "
+#set yrange [0:365]
+set xrange [0:365]
+set xlabel "Tempo (t)"
+set ylabel "Número de indivíduos y(t)"
+set border
+set grid
+set key right bottom
+plot "ex02a_ti_yi_wi_Ei_N=365.dat" using 1:2  w lines lt 3 lw 6 t"Solução exata_y(t)", "ex02a_ti_yi_wi_Ei_N=365.dat" using 1:3 w points lt 0 lw 1  t"Solução estimada W(t)", "ex02a_ti_yi_wi_Ei_N=365.dat" using 1:4  w lines lt 1 lw 3 t"Erro absoluto E(t)"
