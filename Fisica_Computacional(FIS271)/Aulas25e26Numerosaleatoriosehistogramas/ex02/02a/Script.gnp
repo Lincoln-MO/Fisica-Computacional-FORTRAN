@@ -1,0 +1,13 @@
+set term eps
+set output "ex02a_populações.eps" 
+set title " Gráfico População"
+#set yrange [0:0.4]
+set xrange [0:100]
+set ylabel "População "
+set xlabel "N"
+set border
+set grid
+set key left bottom
+set pointsize 0.15
+plot "Populacao01de1-50_r=0.995_N=50.dat" using 1:2 w points lt 3 lw 6 t'População 1-50', "Populacao01de51-100_r=0.995_N=50.dat" using 1:2 w points lt -1 lw 2 t'População 51-100', "Populacao01_r=0.995_N=100.dat" using 1:2 w points lt 19 lw 2 t'População total'
+
