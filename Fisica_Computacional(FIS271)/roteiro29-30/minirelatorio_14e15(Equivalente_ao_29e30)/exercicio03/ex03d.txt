@@ -1,0 +1,13 @@
+D:1;
+E:-0.8;
+m:1;
+a:1;
+w:sqrt(-2*E*(a^(2))/m);
+delta:-acos(((E/D)+1)*sqrt(D/(E+D)));
+s(t):=(-D/E)*(1-sqrt((E+D)/D)*cos(w*t-delta));
+r(t):=log(s(t));
+v(t):=derivative(r(t),t);
+v(t);
+a(t):=derivative(v(t),t);
+a(t);
+plot2d([v(t),a(t)],[t,%pi,15*%pi]);

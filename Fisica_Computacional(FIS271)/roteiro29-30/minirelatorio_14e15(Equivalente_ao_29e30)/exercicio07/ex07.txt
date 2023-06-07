@@ -1,0 +1,19 @@
+
+R:matrix([rs,r1,r2],[-rx,r1+rx+ra,-ra],[-r3,-ra,r2+r3+ra]);
+R_inverso:invert(R)$
+R_inverso$
+I:matrix([i1],[i2],[i3]);
+V:matrix([v0],[0],[0]);
+I:R_inverso.V $
+I;
+v0:1.5/* V*/;
+r1:100 /* Ohm */;
+r2:r1;
+r3:150 /*Ohm*/;
+rx:120 /*Ohm*/;
+ra:1000 /*Ohm*/;
+rs:10 /* Ohm*/;
+R;
+R_inverso;
+V;
+I:R_inverso.V;

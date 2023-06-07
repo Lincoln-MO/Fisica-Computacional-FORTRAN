@@ -1,0 +1,9 @@
+x:%pi;
+y:float(x);
+%pi/x;
+%pi/y;
+1.0*%pi/x;
+1.0*%pi/y;
+float(%pi)/x;
+float(%pi)/y;
+

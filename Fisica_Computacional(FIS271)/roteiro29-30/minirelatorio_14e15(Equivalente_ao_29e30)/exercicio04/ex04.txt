@@ -1,0 +1,11 @@
+t1:10			/* kelvin */;
+kb:8.6173324*10^(-5)	/* ev/kelvin */;
+c10:(3*10^(-13))/(sqrt(%pi)*(kb*t1)^(3/2));
+cinverso:10^(-15)*c10^(-1);
+c0=c10*cinverso;
+g(x):=c10*(x^(0.5))*%e^(-x/(kb*t1));
+float(c0);
+u(e):=0.7*integrate(g(x),x,0,inf);
+u(e);
+plot2d(g,[x,0,10*kb*t1]/*,[y,0,0.15]*/)$;
+

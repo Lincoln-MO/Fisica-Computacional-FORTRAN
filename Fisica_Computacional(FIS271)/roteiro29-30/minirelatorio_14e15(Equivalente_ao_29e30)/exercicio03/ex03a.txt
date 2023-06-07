@@ -1,0 +1,5 @@
+w:1;
+q:%pi/2;
+A:1;
+x(t):=A*cos(w*t+q);
+plot2d(x,[t,0,15*%pi]);

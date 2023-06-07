@@ -1,0 +1,9 @@
+w:1;
+q:%pi/2;
+A:1;
+x(t):=A*cos(w*t+q);
+v(t):= derivative(x(t),t);
+v(t);
+a(t):= derivative(v(t),t);
+a(t);
+plot2d([v(t),a(t)],[t,0,15*%pi]);

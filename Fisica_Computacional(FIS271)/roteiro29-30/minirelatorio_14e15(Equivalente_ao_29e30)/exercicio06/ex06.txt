@@ -1,0 +1,8 @@
+/*load('contrib_ode);*/
+/*r;
+k;
+y0;*/
+eq:'diff(y,t)=r*y*(1-y/k);
+ode2(eq,y,t);
+sol:ic1(%,t=0,y=y0);
+method;

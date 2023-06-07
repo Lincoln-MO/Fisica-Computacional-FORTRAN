@@ -1,0 +1,5 @@
+a:10;
+b:100;
+c:a/b;
+d1:float(a)/float(b);
+d2:rationalize(d1);
