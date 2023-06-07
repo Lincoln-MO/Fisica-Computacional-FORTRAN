@@ -1,0 +1,13 @@
+set term eps
+set output "ex01a_n_aleatorios.eps" 
+set title " Gráfico dos pontos aleatórios"
+#set yrange [0:0.4]
+#set xrange [0:100]
+set ylabel "y "
+set xlabel "x"
+set border
+set grid
+#set key left bottom
+set pointsize 0.15
+y(x) = 1*(1-(x/4)**2)**(0.5)
+plot "azul.dat" using 1:2 w points lt 3 lw 6 t'pontos dentro da elipse', "vermelho.dat" using 1:2 w points lt 1 lw 2 t'pontos fora da elipse', y(x) lt -1 lw 2

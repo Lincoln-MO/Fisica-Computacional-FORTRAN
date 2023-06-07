@@ -1,0 +1,11 @@
+set term eps
+set output "ex01_N=600.eps" 
+set title "Exercício 1 letra a "
+#set yrange [0:365]
+#set xrange [0:365]
+set xlabel "Tempo (t)"
+set ylabel "Altura y(t)"
+set border
+set grid
+set key right bottom
+plot "ex01a_N=600.dat" using 1:2  w lines lt 3 lw 6 t"Posição y(t)", "ex01a_N=600.dat" using 1:3 w points lt 0 lw 1  t"Velocidade v(t)"

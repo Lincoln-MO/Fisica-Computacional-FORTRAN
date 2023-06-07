@@ -1,0 +1,15 @@
+set term eps
+set output "ex02a.eps" 
+set title "Exercício 2 letra a"
+#set yrange [0:1]
+set xrange [-10:0]
+set xlabel "r"
+set ylabel "g(r)"
+set border
+set grid
+#set key left top
+e=1.6021766*10**(-19)
+pi=3.1415
+g(x)= (e/pi)*exp(-2*x)
+
+plot g(x) w lines lt 1 lw 4 t'grafico de g(r)'

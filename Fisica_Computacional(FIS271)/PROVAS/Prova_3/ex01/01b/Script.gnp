@@ -1,0 +1,12 @@
+set term eps
+set output "ex01b_angulo_N.eps" 
+set title " Gráfico de ângulo Vs. N"
+#set yrange [0:0.4]
+#set xrange [0:100]
+set ylabel "ângulo "
+set xlabel "N"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "teta.dat" using 1:2 w points lt 1 lw 1 t'Ângulos aleatórios'
