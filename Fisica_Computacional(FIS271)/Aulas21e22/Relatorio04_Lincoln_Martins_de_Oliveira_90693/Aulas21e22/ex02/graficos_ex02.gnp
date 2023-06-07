@@ -1,0 +1,103 @@
+#Gráfico representando a trajetória do cometa 
+set term eps
+set output "ex02.1a_velocit_verlet_posições_do_cometa.eps" 
+set title " Gráfico de x(t) por y(t)"
+#set yrange [-1.0:1.0]
+#set xrange [0:100]
+set ylabel "y(t) [km]"
+set xlabel "x(t) [km]"
+set border
+set grid
+#set key left top
+set pointsize 0.2
+plot "ex02_t_rx_ry_vx_vy.dat" using 2:3 w points lt 8 lw 4  t'Trajetória do Cometa'
+#===================================================================================================================================================
+reset
+#Gráfico da velocidade em x pela velocidade em y
+set term eps
+set output "ex02.2a_velocit_verlet_velocidades_do_cometa.eps" 
+set title " Gráfico de Vx(t) por Vy(t)"
+#set yrange [-1.0:1.0]
+#set xrange [0:100]
+set ylabel "Vy(t) [km/s²]"
+set xlabel "Vx(t) [km/s²]"
+set border
+set grid
+set key left top
+set pointsize 0.2
+plot "ex02_t_rx_ry_vx_vy.dat" using 4:5 w points lt 3 lw 4  t'Velocidade'
+#===================================================================================================================================================
+reset
+#Gráfico da Energia Potencial do cometa
+set term eps
+set output "ex02.3b_Energia_Potencial_do_cometa.eps" 
+set title " Gráfico de U(t) do Cometa"
+#set yrange [-1.0:1.0]
+#set xrange [0:100]
+set ylabel "U(t) [N/m]"
+set xlabel "t[s]"
+set border
+set grid
+set key left bottom
+set pointsize 0.2
+plot "ex02_t_U_K_Emec.dat" using 1:2 w points lt 3 lw 4  t'Energia Potencial'
+#===================================================================================================================================================
+reset
+#Gráfico da Energia cinética do cometa
+set term eps
+set output "ex02.4b_Energia_Cinetica_do_cometa.eps" 
+set title " Gráfico de K(t) do Cometa"
+#set yrange [-1.0:1.0]
+#set xrange [0:100]
+set ylabel "K(t) [N/m]"
+set xlabel "t[s]"
+set border
+set grid
+set key left top
+set pointsize 0.2
+plot "ex02_t_U_K_Emec.dat" using 1:3 w points lt 1 lw 4  t'Energia Cinética'
+#===================================================================================================================================================
+reset
+#Gráfico da Energia Mecânica do cometa
+set term eps
+set output "ex02.5b_Energia_Mecanica_do_cometa.eps" 
+set title " Gráfico de E(t) do Cometa"
+#set yrange [-1.0:1.0]
+#set xrange [0:100]
+set ylabel "E(t) [N/m]"
+set xlabel "t[s]"
+set border
+set grid
+set key left bottom
+set pointsize 0.2
+plot "ex02_t_U_K_Emec.dat" using 1:4 w points lt 2 lw 4  t'Energia Mecânica'
+#===================================================================================================================================================
+reset
+#Gráfico da Energia Energias do cometa
+set term eps
+set output "ex02.7b_U_K_E.eps" 
+set title " Gráfico Energias do Cometa"
+#set yrange [-1.0:1.0]
+#set xrange [0:100]
+set ylabel "Energia(t) [N/m]"
+set xlabel "t[s]"
+set border
+set grid
+set key left top
+set pointsize 0.2
+plot "ex02_t_U_K_Emec.dat" using 1:4 w points lt 2 lw 4  t'Energia Mecânica', "ex02_t_U_K_Emec.dat" using 1:3 w points lt 1 lw 4  t'Energia Cinética', "ex02_t_U_K_Emec.dat" using 1:2 w points lt 3 lw 4  t'Energia Potencial'
+#===================================================================================================================================================
+reset
+#Gráfico do Momento Angular do cometa
+set term eps
+set output "ex02.6b_Momento_Angular_do_cometa.eps" 
+set title "Módulo do Momento Angular do Cometa"
+set yrange [1.05744155e+24:1.05744455e+24]
+#set xrange [0:100]
+set ylabel "E(t) [N/m]"
+set xlabel "t[s]"
+set border
+set grid
+#set key left top
+set pointsize 0.2
+plot "ex02_Angular.dat" using 1:2 w points lt -1 lw 4  t'Momento Angular'

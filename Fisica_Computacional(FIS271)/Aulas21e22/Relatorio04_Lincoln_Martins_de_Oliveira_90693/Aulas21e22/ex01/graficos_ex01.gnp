@@ -1,0 +1,330 @@
+#comparando as posições para os três metodos/ Gráfico comparando as posições para os metodos de verlet original, velocit verlet e Runge Kutta
+set term eps
+set output "ex01.1a_verlet_original_velocit_verlet_e_Runge-Kutta_posições.eps" 
+set title " Gráfico de r(t)"
+set yrange [-1.0:1.0]
+set xrange [0:100]
+set ylabel "r(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01_verlet_original.dat" using 1:2 w points lt 16 lw 6  t'verlet original', "ex01_velocit_de_verlet.dat" using 1:2 w points  lt 2 lw 4  t'velocit verlet', "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:2 w points  lt 3 t'Runge Kutta'
+#=====================================================================================================================================================
+reset
+#comparando as velocidades para os três metodos / Gráfico comparando as velocidades para os metodos de verlet original, velocit verlet e Runge-Kutta
+set term eps
+set output "ex01.2a_verlet_original_velocit_verlet_e_Runge-Kutta_velocidades.eps" 
+set title " Gráfico v(t)"
+set yrange [-1.2:1.2]
+set xrange [0:100]
+set ylabel "v(t) [m/s²]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01_verlet_original.dat" using 1:3 w points lt 16 lw 6 t'verlet original', "ex01_velocit_de_verlet.dat" using 1:3 w points lt 2 lw 3 t'velocit verlet', "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:3 w points lt 3 lw 1 t'Runge Kutta'
+#=====================================================================================================================================================
+reset
+#comparando as posições para o metodo de verlet original e a solução exata / Gráfico comparando as posições obtidas pelo metodo de verlet original com a solução exata
+set term eps
+set output "ex01.3a_verlet_original_solução_exata_posições.eps" 
+set title " Gráfico r(t)"
+set yrange [-1.0:1.0]
+set xrange [0:100]
+set ylabel "r(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01_verlet_original.dat" using 1:2 w points lt 3 lw 3 t'verlet original', "ex01_verlet_original.dat" using 1:4 w lines lt 16 lw 3 t'solução exata', "ex01_verlet_original.dat" using 1:5 w lines lt 1 lw 3 t'Erro'
+#=====================================================================================================================================================
+reset
+#comparando as posições para o metodo de velocit verlet e a solução exata / Gráfico comparando as posições obtidas pelo metodo de velocit verlet com a solução exata
+set term eps
+set output "ex01.4a_velocit_verlet_e_solução_exata_posições.eps" 
+set title " Gráfico r(t)"
+set yrange [-1.0:1.0]
+set xrange [0:100]
+set ylabel "r(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01_velocit_de_verlet.dat" using 1:2 w points lt 3 lw 3 t'verlet original', "ex01_velocit_de_verlet.dat" using 1:4 w lines lt 16 lw 3 t'solução exata',"ex01_velocit_de_verlet.dat" using 1:5 w lines lt 1 lw 3 t'Erro'
+#=====================================================================================================================================================
+reset
+#comparando as posições para o metodo Runge Kutta e a solução exata/Gráfico comparando as posições obtidas pelo metodo de Runge Kutta com a solução exata
+set term eps
+set output "ex01.5a_Runge_Kutta_e_solução_exata_posições.eps" 
+set title " Gráfico r(t)"
+set yrange [-1.0:1.0]
+set xrange [0:100]
+set ylabel "r(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:2 w points lt 3 lw 3 t'verlet original', "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:4 w lines lt 16 lw 3 t'solução exata',"ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:5 w lines lt 1 lw 3 t'Erro'
+#=====================================================================================================================================================
+reset
+#comparando os erros para as posições obtido pelos três metodos/Gráfico comparando os erros obtidos pelos metodos de verlet original, velocit verlet e Runge-Kutta
+set term eps
+set output "ex01.6a_verlet_original_velocit_verlet_e_Runge-Kutta_Erros.eps" 
+set title " Gráfico dos erros absolutos de r(t)"
+#set yrange [-100:300]
+set log y
+set xrange [0:100]
+set ylabel "r(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left bottom
+set pointsize 0.1
+plot "ex01_verlet_original.dat" using 1:5 lt 3 lw 6 t'verlet original', "ex01_velocit_de_verlet.dat" using 1:5 lt 16 lw 1 t'velocit verlet', "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:5 lt 13 lw 3 t'Runge Kutta'
+#=====================================================================================================================================================
+reset
+#erro obtido pelo metodo de verlet original
+set term eps
+set output "ex01.7a_verlet_original_Erros.eps" 
+set title " Gráfico Erro(t)"
+#set yrange [0:0.00025]
+set xrange [0:100]
+set ylabel "Erro(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01_verlet_original.dat" using 1:5 lt 3 lw 3 t'verlet original' 
+#=====================================================================================================================================================
+reset
+#erro obtido pelo metodo de velocit verlet 
+set term eps
+set output "ex01.8a_velocit_verlet_Erros.eps" 
+set title " Gráfico Erro(t)"
+#set yrange [-100:300]
+set xrange [0:100]
+set ylabel "Erro(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01_velocit_de_verlet.dat" using 1:5 lt 16 lw 3 t'velocit verlet'
+#=====================================================================================================================================================
+reset
+#erro obtido pelo metodo de Runge-Kutta
+set term eps
+set output "ex01.9a_Runge-Kutta_Erros.eps" 
+set title " Gráfico Erro(t)"
+#set yrange [-100:300]
+set xrange [0:100]
+set ylabel "Erro(t) [m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:5 lt 13 lw 3 t'Runge Kutta'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia potencial obtido pelo metodo de verlet original
+set term eps
+set output "ex01.10b_Verlet_Original_Energia_potencial.eps" 
+set title " Gráfico U(t) - Verlet Original"
+set yrange [-1.1:-0.7]
+set xrange [0:100]
+set ylabel "U(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01_verlet_original.dat" using 1:6 lt 19 lw 2 t'Energia Potencial'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia cinética obtido pelo metodo de verlet original
+set term eps
+set output "ex01.11b_Verlet_Original_Energia_cinética.eps" 
+set title " Gráfico K(t) - Verlet Original"
+set yrange [-0.1:0.3]
+set xrange [0:100]
+set ylabel "K(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01_verlet_original.dat" using 1:7 lt 12 lw 2 t'Energia Cinética'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia mecânica obtido pelo metodo de verlet original
+set term eps
+set output "ex01.12b_Verlet_Original_Energia_Mecânica.eps" 
+set title " Gráfico E(t) - Verlet Original"
+set yrange [-0.805:-0.795]
+set xrange [0:100]
+set ylabel "E(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01_verlet_original.dat" using 1:8 lt 11 lw 2 t'Energia Mecânica'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia potencial obtido pelo metodo de velocit verlet
+set term eps
+set output "ex01.13b_Velocit_Verlet_Energia_potencial.eps" 
+set title " Gráfico U(t) - Velocit Verlet"
+set yrange [-1.1:-0.7]
+set xrange [0:100]
+set ylabel "U(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01_velocit_de_verlet.dat" using 1:6 lt 19 lw 2 t'Energia Potencial'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia cinética obtido pelo metodo de  velocit verlet
+set term eps
+set output "ex01.14b_Velocit_Verlet_Energia_cinética.eps" 
+set title " Gráfico K(t) - Velocit Verlet"
+set yrange [-0.1:0.3]
+set xrange [0:100]
+set ylabel "K(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01_velocit_de_verlet.dat" using 1:7 lt 12 lw 2 t'Energia Cinética'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia mecânica obtido pelo metodo de  velocit verlet
+set term eps
+set output "ex01.15b_Velocit_Verlet_Energia_Mecânica.eps" 
+set title " Gráfico E(t) - Velocit Verlet"
+set yrange [-0.80001:-0.79998]
+set xrange [0:100]
+set ylabel "E(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01_velocit_de_verlet.dat" using 1:8 lt 11 lw 2 t'Energia Mecânica'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia potencial obtido pelo metodo de Rung-Kutta
+set term eps
+set output "ex01.16b_Rung-Kutta_Energia_potencial.eps" 
+set title " Gráfico U(t) - Rung-Kutta"
+set yrange [-1.1:-0.7]
+set xrange [0:100]
+set ylabel "U(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:6 lt 19 lw 2 t'Rung-Kutta'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia cinética obtido pelo metodo de  Rung-Kutta
+set term eps
+set output "ex01.17b_Rung-Kutta_Energia_cinética.eps" 
+set title " Gráfico K(t) - Rung-Kutta"
+set yrange [-0.1:0.3]
+set xrange [0:100]
+set ylabel "K(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:7 lt 12 lw 2 t'Rung-Kutta'
+#=====================================================================================================================================================
+reset
+#gráfico para a energia mecânica obtido pelo metodo de  Rung-Kutta
+set term eps
+set output "ex01.18b_Rung-Kutta_Energia_Mecânica.eps" 
+set title " Gráfico E(t) - Rung-Kutta"
+#set yrange [-0.79997:-0.79994]
+set xrange [0:100]
+set ylabel "E(t) [N/m]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot  "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:8 lt 11 lw 2 t'Rung-Kutta'
+#=====================================================================================================================================================
+reset
+#comparando as velocidades para o metodo de verlet original e a solução exata / Gráfico comparando as velocidades obtidas pelo metodo de verlet original com a solução exata
+set term eps
+set output "ex01.19a_verlet_original_solução_exata_velocidade.eps" 
+set title " Gráfico v(t)"
+set yrange [-1.0:1.0]
+set xrange [0:100]
+set ylabel "v(t) [m/s]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01_verlet_original.dat" using 1:3 w points lt 3 lw 3 t'verlet original', "ex01_verlet_original.dat" using 1:9 w lines lt 16 lw 3 t'solução exata', "ex01_verlet_original.dat" using 1:10 w lines lt 1 lw 3 t'Erro'
+#=====================================================================================================================================================
+reset
+#comparando as velocidades para o metodo de Velocit Verlet e a solução exata / Gráfico comparando as velocidades obtidas pelo metodo de Velocit Verlet com a solução exata
+set term eps
+set output "ex01.20a_Velocit_Verlet_solução_exata_velocidade.eps" 
+set title " Gráfico v(t)"
+set yrange [-1.0:1.0]
+set xrange [0:100]
+set ylabel "v(t) [m/s]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01_velocit_de_verlet.dat" using 1:3 w points lt 3 lw 3 t'Velocit Verlet ', "ex01_velocit_de_verlet.dat" using 1:9 w lines lt 16 lw 3 t'solução exata', "ex01_velocit_de_verlet.dat" using 1:10 w lines lt 1 lw 3 t'Erro'
+#=====================================================================================================================================================
+reset
+#comparando as velocidades para o metodo de Runge-Kutta e a solução exata / Gráfico comparando as velocidades obtidas pelo metodo de Runge-Kutta com a solução exata
+set term eps
+set output "ex01.21a_Runge-Kutta_solução_exata_velocidade.eps" 
+set title " Gráfico v(t)"
+set yrange [-1.0:1.0]
+set xrange [0:100]
+set ylabel "v(t) [m/s]"
+set xlabel "t [s]"
+set border
+set grid
+set key left top
+set pointsize 0.1
+plot "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:3 w points lt 3 lw 3 t'Runge-Kutta ', "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:9 w lines lt 16 lw 3 t'solução exata', "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:10 w lines lt 1 lw 3 t'Erro'
+#=====================================================================================================================================================
+reset
+#comparando os erros para as velocidades obtido pelos três metodos/Gráfico comparando os erros de v(t) obtidos pelos metodos de verlet original, velocit verlet e Runge-Kutta
+set term eps
+set output "ex01.22a_verlet_original_velocit_verlet_e_Runge-Kutta_Erros_de_v(t).eps" 
+set title " Gráfico dos erros absolutos de v(t)"
+#set yrange [0.000:0.018]
+set log y
+set xrange [0:100]
+set ylabel "v(t) [m/s]"
+set xlabel "t [s]"
+set border
+set grid
+set key left bottom
+set pointsize 0.1
+plot "ex01_verlet_original.dat" using 1:10 lt 3 lw 6 t'verlet original', "ex01_velocit_de_verlet.dat" using 1:10 lt 16 lw 1 t'velocit verlet', "ex01a_ti_ri_vi_yi_Erroi_N=10000.dat" using 1:10 lt 13 lw 3 t'Runge Kutta'
