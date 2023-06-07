@@ -1,0 +1,442 @@
+
+
+*******************************************************************************
+Thu Apr 19 20:24:47 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Thu Apr 19 20:25:00 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Thu Apr 19 20:25:28 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Thu Apr 19 20:26:51 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Thu Apr 19 20:28:26 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Thu Apr 19 20:30:22 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Thu Apr 19 20:32:49 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Thu Apr 19 20:33:18 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Thu Apr 19 20:33:51 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Thu Apr 19 20:34:21 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 
+
+
+*******************************************************************************
+Fri Apr 20 09:46:50 2018
+
+
+FIT:    data read from "millikan.dat" using 1:2
+        format = x:z
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 663.041           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.3865
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00382787
+rel. change during last iteration : -5.68177e-13
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0171596
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000294452
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63828          +/- 0.001025     (0.0626%)
+b               = 0.0285357        +/- 0.01212      (42.47%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.931  1.000 

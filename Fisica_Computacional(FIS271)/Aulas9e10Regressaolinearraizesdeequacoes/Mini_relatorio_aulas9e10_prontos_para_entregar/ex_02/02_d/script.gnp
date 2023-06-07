@@ -1,0 +1,11 @@
+set term eps
+set output "ex02d.eps" 
+set title "Exercício 2 letra b"
+set xlabel "n"
+set ylabel "q(n)"
+set border
+set grid
+set key left top
+f(x)=1.6382785714285741*x+2.8535714285681024E-002
+g(x)=1.6405260143198093*x
+plot f(x) w lines lt 1 lw 1 t'C.A de b', g(x) w lines lt -1 lw 1 t'C.A de c',"millikan.dat" using 1:2 lt 3 lw 2 t'millikan'

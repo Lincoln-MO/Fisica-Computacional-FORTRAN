@@ -1,0 +1,10 @@
+set term eps
+set output "Grafico_do_ex01a_x=40 e x0-2.eps" 
+set title "Gráfico de Xn vs n"
+set xlabel "n"
+set ylabel "Xn"
+set xrange [0:10]
+set border
+set grid
+
+plot "nxn_de_primeirointervalo.dat" using 1:2 lt 3 lw 2 t"X0 = 40", "nxn_de_segundointervalo.dat" using 1:2 lt 5 lw 2 t"X0 = -2"
