@@ -1,0 +1,20 @@
+Comando						Descrição						Exempo
+implicit none					se declarar uma varialve e não utiliza-la ou utilizar variaveis não declaradas vai acuzar erro no programa
+program 					inicia um local de programação				program (Nome do programa)
+end						finaliza algum processo					program program
+real*8						Variavel real dupla precizão				real*8 :: x
+integer						Variavel inteira					integer	:: n
+character(len=18)				definir variavel string					character(len=18), parameter :: arquivo = "ex_01_c_raizes.dat"
+open(100,*)					cria um arquivo 					open(100,file = arquivo)
+do i=1,5					faça 							do i=1,5 (alguma coisadentro do loop) enddo
+if (condição) then				se							if (i==1) then 	/(barra representa quebra de linha) print*,"Entre com o valor inicial de x considerando os intervalos -30x<-23 " / read*,x01 / endif
+else						se não							else /(faça algo)
+elseif (condição) then				se, ou então						elseif (i==4) then (faça alguma coisa) endif
+read*,(variavel)				Pede para que o usuario entrar com o valor da variavel 	read*,x05
+abs()						função modulo						abs((xn -x)/(xn))
+sin()						função seno						sin(x/5)
+cos()						função cosseno						cos(x/5)
+dexp()						função exponencia de e					dexp(x/5)
+goto (algum numeroqualquer 28)			Va para numero 28					goto 28 (quando for para 20 o programa tem que continuar rodando por isso o continue) 28 continue
+write(100,*) (alguma variavel ou função)	Escreva algo em algum lugar				write(100,*) "raiz=", raiz (escreve a variavel raiz)
+
