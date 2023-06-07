@@ -1,6 +1,7 @@
 # Fisica-Computacional-FORTRAN
-##A Linguagem Fortran
-##Introdução
+# A Linguagem Fortran
+
+# Introdução
 - FORTRAN = FORmula TRANslation (em português: tradução de fórmulas).
 - O Fortran é uma linguagem simples cujo vocabulário consiste de um conjunto de palavras,
 conhecidas como "palavras-chave" (para se ter uma idéia, no Fortran77 eram cerca de 450;
