@@ -1,0 +1,11 @@
+set term png
+set output "teste.png" 
+set title "Física Computacional"
+set xlabel "eixo X"
+set ylabel "eixo Y"
+set border
+set grid
+set xrange [-10:10]
+set yrange [-20:10]
+f(x)= x**2-2*x-15
+plot f(x)
