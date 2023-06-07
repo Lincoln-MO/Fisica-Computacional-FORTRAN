@@ -1,0 +1,10 @@
+set term eps
+set output "Grafico_do_ex01d_x=-4.eps" 
+set title "Grafico de Xn vs Ntestes"
+set xlabel "n"
+set ylabel "Xn"
+set xrange [0:45]
+set border
+set grid
+
+plot "ex_01_d_xn_npassosrealizados_x=-4.dat" using 2:1 lt 12 lw 4 t"X0 = -4"

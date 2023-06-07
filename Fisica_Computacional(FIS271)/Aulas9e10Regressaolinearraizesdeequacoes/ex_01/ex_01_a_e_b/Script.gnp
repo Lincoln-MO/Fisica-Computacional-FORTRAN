@@ -1,0 +1,12 @@
+set term eps
+set output "gráfico_ex_01_a.eps"
+set title "Gráfico de f(x)"
+set xlabel "eixo X"
+set ylabel "eixo Y"
+set border
+set grid
+set xrange [-20:20]
+set yrange [-20:20]
+f(x)= (3 + x)**2 -12.
+plot f(x)
+

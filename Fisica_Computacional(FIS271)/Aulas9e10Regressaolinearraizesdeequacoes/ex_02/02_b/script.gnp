@@ -1,0 +1,10 @@
+set term png
+set output "ex01e.png" 
+set title "Exercício 2 letra b"
+set xlabel "n"
+set ylabel "q(n)"
+set border
+set grid
+f(x)=a*x+b
+fit f(x) "millikan.dat" using 1:2 via a,b
+plot f(x) lt 8 lw 3, "millikan.dat" using 1:2 w linespoints lt 10 lw 2 t'millikan'

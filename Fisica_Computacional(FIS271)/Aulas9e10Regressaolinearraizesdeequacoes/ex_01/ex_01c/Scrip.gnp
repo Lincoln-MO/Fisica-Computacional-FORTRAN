@@ -1,0 +1,12 @@
+set term eps
+set output "teste.eps" 
+set title "Comportamento de g(x)"
+set xlabel "eixo X"
+set ylabel "eixo Y"
+set border
+set grid
+set xrange [-40:40]
+
+g(x) = (1 + (1 + x**2)*sin(x/5))/(1 + x**2 )
+plot g(x)
+
